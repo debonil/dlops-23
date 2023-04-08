@@ -1,4 +1,5 @@
 # %%
+import pandas as pd
 import torch
 import torch.nn
 import torch.optim
@@ -13,9 +14,11 @@ import math
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 # %%
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 print(device)
+
 
 # %%
 transform = T.Compose(
@@ -31,11 +34,11 @@ test_set = torchvision.datasets.CIFAR10(
 testloader = torch.utils.data.DataLoader(
     test_set, batch_size=32, shuffle=True)
 
+
 # %%
-
-
 def get_model_mobilenet_cifar10():
-    model = torchvision.models.mobilenet_v2(pretrained=True)
+    model = torchvision.models.mobilenet_v2(
+        weights=torchvision.models.MobileNet_V2_Weights.IMAGENET1K_V2)
     model.classifier[1] = torch.nn.Linear(model.classifier[1].in_features, 10)
     model = model.to(device)
     # print(model)
@@ -52,10 +55,9 @@ def timeSince(since):
     s -= m * 60
     return '%dm %ds' % (m, s)
 
+
 # %%
 # Train the model
-
-
 def model_training(model, criterion, optimizer, trainloader, testloader, num_epochs=10):
     start = time.time()
     loss_list = []
@@ -80,17 +82,17 @@ def model_training(model, criterion, optimizer, trainloader, testloader, num_epo
             ).numpy(), outputs.cpu().detach().numpy().argmax(axis=1))
         # Evaluate the model on the validation set
         with torch.no_grad():
-            images, labels = next(iter(testloader))
-            images, labels = images.to(device), labels.to(device)
-            outputs = model(images)
-            loss = criterion(outputs, labels)
-            val_loss += loss.item()
-            val_acc += metrics.accuracy_score(labels.cpu().detach(
-            ).numpy(), outputs.cpu().detach().numpy().argmax(axis=1))
+            for images, labels in testloader:
+                images, labels = images.to(device), labels.to(device)
+                outputs = model(images)
+                loss = criterion(outputs, labels)
+                val_loss += loss.item()
+                val_acc += metrics.accuracy_score(labels.cpu().detach(
+                ).numpy(), outputs.cpu().detach().numpy().argmax(axis=1))
         train_loss = train_loss/len(trainloader)
-        val_loss = val_loss
+        val_loss = val_loss/len(testloader)
         train_acc = train_acc/len(trainloader)
-        val_acc = val_acc
+        val_acc = val_acc/len(testloader)
         print(f'Epoch: {epoch+1} ({timeSince(start)}) \tTraining Loss: {train_loss:.3f}, \tTest Loss: {val_loss:.3f},  \tTraining acc: {train_acc:.2f}, \tTest acc: {val_acc:.2f}, ')
         loss_list.append([train_loss, val_loss, train_acc, val_acc])
 
@@ -125,9 +127,8 @@ def confusionMatrixAndAccuracyReport(Y_test, Y_pred_probs, label):
     print(f'Top 5 Accuracy: {top_5_accuracy*100}%')
     print(f'Classwise Accuracy Score: \n{classwiseAccuracy}')
 
+
 # %%
-
-
 def plot_training_graphs(loss_list):
     fig = plt.figure(figsize=(20, 7))
     plot = fig.add_subplot(1, 2, 1)
@@ -148,17 +149,32 @@ def plot_training_graphs(loss_list):
 
 
 # %%
-model = get_model_mobilenet_cifar10()
-optimizer = torch.optim.Adam(model.parameters(), lr=0.000001)
-criterion = torch.nn.CrossEntropyLoss()
-loss_list, t, train_a, test_a = model_training(
-    model, criterion, optimizer, trainloader, testloader, num_epochs=10)
-plot_training_graphs(loss_list)
-test_images, test_labels = next(iter(testloader))
-test_images, test_labels = test_images.to(device), test_labels.to(device)
-test_output = model(test_images)
-with torch.no_grad():
-    confusionMatrixAndAccuracyReport(
-        test_labels.cpu(), test_output.cpu(), test_set.classes)
+learning_rates = [1e-2, 1e-3, 1e-4, 1e-5, 1e-6]
+num_epochs = [10, 15]
+
+results = []
+
+for lr in learning_rates:
+    for epoch in num_epochs:
+        print(
+            f'\n\n***\t\t\t\tEpoch = {epoch}\tLearning Rate = {lr}\t\t\t\t***\n\n')
+        model = get_model_mobilenet_cifar10()
+        optimizer = torch.optim.Adam(model.parameters(), lr=lr)
+        criterion = torch.nn.CrossEntropyLoss()
+        loss_list, t, train_a, test_a = model_training(
+            model, criterion, optimizer, trainloader, testloader, num_epochs=epoch)
+        results.append({
+            "Learning Rate": lr,
+            "Epoch": epoch,
+            "Training Time": t,
+            "Training Accuracy": train_a,
+            "Test Accuracy": test_a,
+        })
+
 
 # %%
+
+df = pd.DataFrame(results)
+print("\n\n Overall Summary : \n")
+print(df.to_markdown(index=False))
+df.to_csv("M21AIE225_lab_7_summary.csv", index=False)
