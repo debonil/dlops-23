@@ -1,19 +1,20 @@
 
 
 # %%
-import matplotlib.pyplot as plt
-import numpy as np
-import math
-import time
-import seaborn as sns
-from sklearn import metrics
-import torchvision.transforms as T
-import torchvision.models
-import torchvision.datasets
-import torch.utils.data
-import torch.optim
-import torch.nn
+import pandas as pd
 import torch
+import torch.nn
+import torch.optim
+import torch.utils.data
+import torchvision.datasets
+import torchvision.models
+import torchvision.transforms as T
+from sklearn import metrics
+import seaborn as sns
+import time
+import math
+import numpy as np
+import matplotlib.pyplot as plt
 print('Starting ...')
 
 
@@ -82,7 +83,7 @@ def model_training(model, criterion, optimizer, trainloader, testloader, num_epo
 #sns.set(rc={'axes.facecolor': 'lightblue', 'figure.facecolor': 'lightblue'})
 
 
-def confusionMatrixAndAccuracyReport(Y_test, Y_pred_probs, classes):
+def confusionMatrixAndAccuracyReport(Y_test, Y_pred_probs, classes, title=''):
     Y_pred = Y_pred_probs.argmax(axis=1)
     cm = metrics.confusion_matrix(Y_test, Y_pred)
     overallAccuracy = metrics.accuracy_score(Y_test, Y_pred)
@@ -94,7 +95,7 @@ def confusionMatrixAndAccuracyReport(Y_test, Y_pred_probs, classes):
 
     plt.figure(figsize=(10, 10))
     plt.title(
-        f'Top 1 Accuracy : {overallAccuracy*100:3.2f}% | Top 5 Accuracy : {top_5_accuracy*100:3.2f}% ', size=14)
+        f'{title} : Top 1 Accuracy : {overallAccuracy*100:3.2f}% | Top 5 Accuracy : {top_5_accuracy*100:3.2f}% ', size=14)
     plt.ylabel('Actual label')
     plt.xlabel('Predicted label')
     sns.heatmap(data=cm, annot=True, square=True,  cmap='Blues',
@@ -108,17 +109,17 @@ def confusionMatrixAndAccuracyReport(Y_test, Y_pred_probs, classes):
 
 
 # %%
-def plot_training_graphs(loss_list):
+def plot_training_graphs(loss_list, title=''):
     fig = plt.figure(figsize=(20, 7))
     plot = fig.add_subplot(1, 2, 1)
-    plot.set_title("Training vs Validation loss")
+    plot.set_title(f"{title} : Training vs Validation loss")
     plot.plot(loss_list[:, 0], linestyle='--', label="Training Loss")
     plot.plot(loss_list[:, 1], linestyle='-', label="Validation Loss")
     plot.set_xlabel("Epoch")
     plot.set_ylabel("Loss")
     plot.legend()
     plot = fig.add_subplot(1, 2, 2)
-    plot.set_title("Training vs Validation Accuracy")
+    plot.set_title(f"{title} : Training vs Validation Accuracy")
     plot.plot(loss_list[:, 2], linestyle='--', label="Training Accuracy")
     plot.plot(loss_list[:, 3], linestyle='-', label="Validation Accuracy")
     plot.set_xlabel("Epoch")
@@ -206,14 +207,16 @@ class VisionTransformerBlock(torch.nn.Module):
         out = x + self.mhsa(self.norm1(x))
         out = out + self.mlp(self.norm2(out))
         return out
-    
+
+
 class PositionalEmbedding(torch.nn.Module):
     def __init__(self, d_model, max_len=5000):
         super(PositionalEmbedding, self).__init__()
         self.dropout = torch.nn.Dropout(p=0.1)
         self.pe = torch.nn.Parameter(torch.zeros(max_len, d_model))
         position = torch.arange(0, max_len, dtype=torch.float).unsqueeze(1)
-        div_term = torch.exp(torch.arange(0, d_model, 2).float() * (-math.log(10000.0) / d_model))
+        div_term = torch.exp(torch.arange(
+            0, d_model, 2).float() * (-math.log(10000.0) / d_model))
         self.pe[:, 0::2] = torch.sin(position * div_term)
         self.pe[:, 1::2] = torch.cos(position * div_term)
 
@@ -221,8 +224,9 @@ class PositionalEmbedding(torch.nn.Module):
         x = x + self.pe[:x.size(1), :]
         return self.dropout(x)
 
+
 class VisionTransformerClassifier(torch.nn.Module):
-    def __init__(self, chw, n_patches=7, n_blocks=2, hidden_dim=8, n_heads=2, out_d=10, activation_fn=torch.nn.ReLU, learn_pos_emb = False):
+    def __init__(self, chw, n_patches=7, n_blocks=2, hidden_dim=8, n_heads=2, out_d=10, activation_fn=torch.nn.ReLU, learn_pos_emb=False):
         # Super constructor
         super(VisionTransformerClassifier, self).__init__()
 
@@ -250,7 +254,8 @@ class VisionTransformerClassifier(torch.nn.Module):
 
         # 3) Positional embedding
         if learn_pos_emb:
-            self.positional_embeddings = PositionalEmbedding(hidden_dim, n_patches ** 2 + 1)
+            self.positional_embeddings = PositionalEmbedding(
+                hidden_dim, n_patches ** 2 + 1)
         else:
             self.register_buffer('positional_embeddings', get_positional_embeddings(
                 n_patches ** 2 + 1, hidden_dim), persistent=False)
@@ -349,37 +354,91 @@ testloader = torch.utils.data.DataLoader(
 view_samples(trainloader, train_set.classes)
 print('Data Loading Done !')
 
-model = VisionTransformerClassifier((3, 32, 32), n_patches=8, n_blocks=6,
-                                    hidden_dim=8, n_heads=8, out_d=10).to(device)
+# %%
 
-print('Model created!')
-print(model)
-print('Starting training !')
-optimizer = torch.optim.Adam(model.parameters(), lr=1e-4)
-criterion = torch.nn.CrossEntropyLoss()
-loss_list, t, train_a, test_a = model_training(
-    model, criterion, optimizer, trainloader, testloader, num_epochs=5, model_name='VisionTransformer')
-plot_training_graphs(loss_list)
-with torch.no_grad():
-    correct, total = 0, 0
-    test_loss = 0.0
-    test_labels = []
-    test_output = []
-    for batch in testloader:
-        x, y = batch
-        x, y = x.to(device), y.to(device)
-        y_hat = model(x)
-        loss = criterion(y_hat, y)
-        test_loss += loss.detach().cpu().item() / len(testloader)
+activation_fns = [torch.nn.ReLU, torch.nn.Tanh, torch.nn.GELU]
 
-        correct += torch.sum(torch.argmax(y_hat, dim=1)
-                             == y).detach().cpu().item()
-        total += len(x)
-    print(f"Test loss: {test_loss:.2f}")
-    print(f"Test accuracy: {correct / total * 100:.2f}%")
+positional_embeddings = [
+    False,  # for cosine positional embedding
+    True,  # for learnable positional embedding
+]
+
+results = []
+
+for pe in positional_embeddings:
+    for act_fn in activation_fns:
+        print(
+            f'\n\n***\t\t\t\tActivation Function = {act_fn.__name__}\tLearnable Posisional Embedding = {pe}\t\t\t\t***\n\n')
+
+        n_patches = 8
+        n_blocks = 6
+        hidden_dim = 8
+        n_heads = 8
+
+        if pe:
+            n_blocks = 4
+            n_heads = 6
+            hidden_dim = 12
+        else:
+            n_blocks = 6
+            n_heads = 8
+            hidden_dim = 8
+
+        model = VisionTransformerClassifier((3, 32, 32), n_patches=n_patches, n_blocks=n_blocks,
+                                            hidden_dim=hidden_dim, n_heads=n_heads, out_d=10, activation_fn=act_fn).to(device)
+
+        print(
+            f'Model created with parameter  n_blocks = { n_blocks }, n_heads = { n_heads }, hidden_dim = { hidden_dim }, act_fn = { act_fn.__name__ }, positional embd = { "Learnable" if pe else "Cosine" }, ')
+        # print(model)
+        model_name = f'ViT_{act_fn.__name__}_{ "Learnable" if pe else "Cosine" }_{n_blocks}B{n_heads}H{hidden_dim}D'
+        print(f'Starting training {model_name}!')
+        lr = 1e-4
+        epoch = 10
+        optimizer = torch.optim.Adam(model.parameters(), lr=lr)
+        print(f'optimizer => {optimizer}')
+        criterion = torch.nn.CrossEntropyLoss()
+        print(f'criterion => {criterion}')
+        print(f'learning rate => {lr}')
+        print(f'epoch => {epoch}')
+        loss_list, t, train_a, test_a = model_training(
+            model, criterion, optimizer, trainloader, testloader, num_epochs=epoch, model_name='VisionTransformer')
+        plot_training_graphs(loss_list, title=model_name)
+        with torch.no_grad():
+            correct, total = 0, 0
+            test_loss = 0.0
+            test_labels = []
+            test_output = []
+            for batch in testloader:
+                x, y = batch
+                x, y = x.to(device), y.to(device)
+                y_hat = model(x)
+                loss = criterion(y_hat, y)
+                test_loss += loss.detach().cpu().item() / len(testloader)
+
+                correct += torch.sum(torch.argmax(y_hat, dim=1)
+                                     == y).detach().cpu().item()
+                total += len(x)
+            print(f"Test loss: {test_loss:.2f}")
+            print(f"Test accuracy: {correct / total * 100:.2f}%")
+            print(f'Confusion Matrix:')
+            confusionMatrixAndAccuracyReport(
+                y.cpu(), y_hat.cpu(), test_set.classes, title=model_name)
+        results.append({
+            "model": model_name,
+            "Positional Embed": 'Cosine PE' if pe else 'Learnable PE',
+            "Activation Fn": act_fn.__name__,
+            "Learning Rate": lr,
+            "Epoch": epoch,
+            "Training Time": t,
+            "Training Accuracy": train_a,
+            "Test Accuracy": test_a,
+        })
+
+        df = pd.DataFrame(results)
+        df.to_csv("M21AIE225_Ass_3_Q1_resuts_1.csv", index=False)
 
 
 # %%
-with torch.no_grad():
-    print(f'Confusion Matrix')
-    confusionMatrixAndAccuracyReport(y.cpu(), y_hat.cpu(), test_set.classes)
+
+print("\n\n Overall Summary : \n")
+print(df.to_markdown(index=False))
