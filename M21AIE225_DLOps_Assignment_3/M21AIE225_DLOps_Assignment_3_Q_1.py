@@ -83,8 +83,7 @@ def model_training(model, criterion, optimizer, trainloader, testloader, num_epo
 #sns.set(rc={'axes.facecolor': 'lightblue', 'figure.facecolor': 'lightblue'})
 
 
-def confusionMatrixAndAccuracyReport(Y_test, Y_pred_probs, classes, title=''):
-    Y_pred = Y_pred_probs.argmax(axis=1)
+def confusionMatrixAndAccuracyReport(Y_test, Y_pred, classes, title=''):
     cm = metrics.confusion_matrix(Y_test, Y_pred)
     overallAccuracy = metrics.accuracy_score(Y_test, Y_pred)
 
@@ -351,13 +350,13 @@ train_set = torchvision.datasets.CIFAR10(
     root='./data', train=True, download=True, transform=transform)
 train_set = filter_dataset(train_set)
 trainloader = torch.utils.data.DataLoader(
-    train_set, batch_size=256, shuffle=True)
+    train_set, batch_size=64, shuffle=True)
 
 test_set = torchvision.datasets.CIFAR10(
     root='./data', train=False, download=True, transform=transform)
 test_set = filter_dataset(test_set)
 testloader = torch.utils.data.DataLoader(
-    test_set, batch_size=256, shuffle=True)
+    test_set, batch_size=64, shuffle=True)
 
 view_samples(trainloader, train_set.classes)
 print('Data Loading Done !')
@@ -393,7 +392,7 @@ for pe in positional_embeddings:
             hidden_dim = 8
 
         model = VisionTransformerClassifier((3, 32, 32), n_patches=n_patches, n_blocks=n_blocks,
-                                            hidden_dim=hidden_dim, n_heads=n_heads, out_d=10, activation_fn=act_fn).to(device)
+                                            hidden_dim=hidden_dim, n_heads=n_heads, out_d=5, activation_fn=act_fn).to(device)
 
         print(
             f'Model created with parameter  n_blocks = { n_blocks }, n_heads = { n_heads }, hidden_dim = { hidden_dim }, act_fn = { act_fn.__name__ }, positional embd = { "Learnable" if pe else "Cosine" }, ')
