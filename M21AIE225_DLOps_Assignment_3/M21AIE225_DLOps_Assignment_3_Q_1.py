@@ -90,22 +90,30 @@ def confusionMatrixAndAccuracyReport(Y_test, Y_pred_probs, classes, title=''):
 
     classwiseAccuracy = cm.diagonal()/cm.sum(axis=1)
 
-    top_5_accuracy = metrics.top_k_accuracy_score(
-        Y_test, Y_pred_probs, k=5, labels=np.arange(10))
+    f1_score = metrics.f1_score(Y_test, Y_pred, average='weighted')
 
     plt.figure(figsize=(10, 10))
     plt.title(
-        f'{title} : Top 1 Accuracy : {overallAccuracy*100:3.2f}% | Top 5 Accuracy : {top_5_accuracy*100:3.2f}% ', size=14)
+        f'{title} : Accuracy : {overallAccuracy*100:3.2f}% | F1 Score : {f1_score*100:3.2f}% ', size=14)
     plt.ylabel('Actual label')
     plt.xlabel('Predicted label')
+    cm = pd.DataFrame(cm, index=classes, columns=classes)
+    cm.index.name = 'True Label'
+    cm.columns.name = 'Predicted Label'
     sns.heatmap(data=cm, annot=True, square=True,  cmap='Blues',
                 fmt='g', xticklabels=classes, yticklabels=classes)
 
     plt.show()
-    plt.savefig(f'confusion_mat_{time.time()}.png', bbox_inches='tight')
-    print(f'Top 1 Accuracy: {overallAccuracy*100:3.3f}%')
-    print(f'Top 5 Accuracy: {top_5_accuracy*100}%')
-    print(f'Classwise Accuracy Score: \n{classwiseAccuracy}')
+    plt.savefig(
+        f'confusion_mat_{title}_{time.time()}.png', bbox_inches='tight')
+    print(f'Accuracy: {overallAccuracy*100:3.3f}%')
+    print(f'F1 Score: {f1_score*100:3.3f}%')
+    classwiseAccuracy_df = pd.DataFrame(
+        data=[classwiseAccuracy], columns=classes)
+    print(
+        f'\nClasswise Accuracy Score: \n{classwiseAccuracy_df.to_markdown(index=False)}')
+    print('\nConfusion Matrix:')
+    print(cm.to_markdown())
 
 
 # %%
@@ -126,7 +134,8 @@ def plot_training_graphs(loss_list, title=''):
     plot.set_ylabel("Accuracy")
     plot.legend()
     plt.show()
-    plt.savefig(f'training_loss_{time.time()}.png', bbox_inches='tight')
+    plt.savefig(
+        f'training_loss_{title}_{time.time()}.png', bbox_inches='tight')
 
 
 # %%
@@ -336,8 +345,7 @@ def filter_dataset(dataset_full):
 
 # %%
 print('Data Loading ...')
-transform = T.Compose(
-    [T.ToTensor(), T.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
+transform = T.Compose([T.ToTensor()])
 
 train_set = torchvision.datasets.CIFAR10(
     root='./data', train=True, download=True, transform=transform)
@@ -403,29 +411,25 @@ for pe in positional_embeddings:
         loss_list, t, train_a, test_a = model_training(
             model, criterion, optimizer, trainloader, testloader, num_epochs=epoch, model_name='VisionTransformer')
         plot_training_graphs(loss_list, title=model_name)
+        model.eval()
         with torch.no_grad():
-            correct, total = 0, 0
-            test_loss = 0.0
             test_labels = []
             test_output = []
             for batch in testloader:
                 x, y = batch
                 x, y = x.to(device), y.to(device)
                 y_hat = model(x)
-                loss = criterion(y_hat, y)
-                test_loss += loss.detach().cpu().item() / len(testloader)
+                test_labels += y.cpu()
+                test_output += torch.argmax(y_hat, dim=1).cpu()
 
-                correct += torch.sum(torch.argmax(y_hat, dim=1)
-                                     == y).detach().cpu().item()
-                total += len(x)
-            print(f"Test loss: {test_loss:.2f}")
-            print(f"Test accuracy: {correct / total * 100:.2f}%")
-            print(f'Confusion Matrix:')
+            test_labels = np.array(test_labels)
+            test_output = np.array(test_output)
+            print(f'\nModel Evaluation Summary:')
             confusionMatrixAndAccuracyReport(
-                y.cpu(), y_hat.cpu(), test_set.classes, title=model_name)
+                test_labels, test_output, test_set.classes, title=model_name)
         results.append({
             "model": model_name,
-            "Positional Embed": 'Cosine PE' if pe else 'Learnable PE',
+            "Positional Embed": 'Learnable PE' if pe else 'Cosine PE',
             "Activation Fn": act_fn.__name__,
             "Learning Rate": lr,
             "Epoch": epoch,
