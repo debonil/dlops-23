@@ -1,0 +1,20 @@
+M21AIE225_Lab_Assignment_7.py:111: RuntimeWarning: invalid value encountered in true_divide
+  classwiseAccuracy = cm.diagonal()/cm.sum(axis=1)
+cuda:0
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch: 1 (1m 39s) 	Training Loss: 2.010, 	Test Loss: 1.709,  	Training acc: 0.30, 	Test acc: 0.50, 
+Epoch: 2 (3m 19s) 	Training Loss: 1.353, 	Test Loss: 1.200,  	Training acc: 0.62, 	Test acc: 0.66, 
+Epoch: 3 (5m 47s) 	Training Loss: 0.993, 	Test Loss: 0.890,  	Training acc: 0.72, 	Test acc: 0.69, 
+Epoch: 4 (7m 27s) 	Training Loss: 0.797, 	Test Loss: 0.842,  	Training acc: 0.77, 	Test acc: 0.81, 
+Epoch: 5 (9m 25s) 	Training Loss: 0.673, 	Test Loss: 0.527,  	Training acc: 0.80, 	Test acc: 0.81, 
+Epoch: 6 (11m 6s) 	Training Loss: 0.587, 	Test Loss: 0.771,  	Training acc: 0.82, 	Test acc: 0.72, 
+Epoch: 7 (12m 49s) 	Training Loss: 0.529, 	Test Loss: 0.670,  	Training acc: 0.83, 	Test acc: 0.75, 
+Epoch: 8 (14m 30s) 	Training Loss: 0.483, 	Test Loss: 0.505,  	Training acc: 0.85, 	Test acc: 0.84, 
+Epoch: 9 (16m 14s) 	Training Loss: 0.443, 	Test Loss: 0.569,  	Training acc: 0.86, 	Test acc: 0.78, 
+Epoch: 10 (17m 57s) 	Training Loss: 0.413, 	Test Loss: 0.814,  	Training acc: 0.87, 	Test acc: 0.66, 
+Training completed in 17m 57s 	Training Loss: 0.413, 	Test Loss: 0.814,  	Training acc: 0.87, 	Test acc: 0.66, 
+Top 1 Accuracy: 71.875%
+Top 5 Accuracy: 96.875%
+Classwise Accuracy Score: 
+[1.   1.   0.75 0.5  1.   0.25  nan 1.   0.6  1.  ]
