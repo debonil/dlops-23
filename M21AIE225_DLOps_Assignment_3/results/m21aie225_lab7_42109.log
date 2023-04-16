@@ -1,0 +1,265 @@
+Starting ...WDN
+Available device ==> cuda:0
+Data Loading ...
+Files already downloaded and verified
+Files already downloaded and verified
+torch.Size([256, 3, 32, 32])
+Data Loading Done !
+
+
+***				Activation Function = ReLU	Learnable Posisional Embedding = False				***
+
+
+Model created with parameter  n_blocks = 6, n_heads = 8, hidden_dim = 8, act_fn = ReLU, positional embd = Cosine, 
+Starting training ViT_ReLU_Cosine_6B8H8D!
+optimizer => Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+criterion => CrossEntropyLoss()
+learning rate => 0.0001
+epoch => 10
+Epoch: 1 (14m 40s) 	Training Loss: 2.307, 	Test Loss: 2.265,  	Training acc: 0.13, 	Test acc: 0.20, 
+Epoch: 2 (29m 19s) 	Training Loss: 2.251, 	Test Loss: 2.240,  	Training acc: 0.20, 	Test acc: 0.20, 
+Epoch: 3 (43m 57s) 	Training Loss: 2.232, 	Test Loss: 2.225,  	Training acc: 0.20, 	Test acc: 0.20, 
+Epoch: 4 (58m 36s) 	Training Loss: 2.219, 	Test Loss: 2.211,  	Training acc: 0.27, 	Test acc: 0.32, 
+Epoch: 5 (73m 14s) 	Training Loss: 2.200, 	Test Loss: 2.183,  	Training acc: 0.32, 	Test acc: 0.33, 
+Epoch: 6 (87m 52s) 	Training Loss: 2.172, 	Test Loss: 2.158,  	Training acc: 0.33, 	Test acc: 0.33, 
+Epoch: 7 (102m 29s) 	Training Loss: 2.151, 	Test Loss: 2.143,  	Training acc: 0.33, 	Test acc: 0.34, 
+Epoch: 8 (117m 7s) 	Training Loss: 2.137, 	Test Loss: 2.130,  	Training acc: 0.34, 	Test acc: 0.34, 
+Epoch: 9 (131m 43s) 	Training Loss: 2.128, 	Test Loss: 2.122,  	Training acc: 0.34, 	Test acc: 0.34, 
+Epoch: 10 (146m 20s) 	Training Loss: 2.122, 	Test Loss: 2.118,  	Training acc: 0.34, 	Test acc: 0.35, 
+Training completed in 146m 20s 	Training Loss: 2.122, 	Test Loss: 2.118,  	Training acc: 0.34, 	Test acc: 0.35, 
+Test loss: 2.12
+Test accuracy: 34.46%
+Confusion Matrix:
+Top 1 Accuracy: 33.088%
+Top 5 Accuracy: 61.76470588235294%
+Classwise Accuracy Score: 
+[0.         0.         0.77419355 0.         0.875     ]
+
+
+***				Activation Function = Tanh	Learnable Posisional Embedding = False				***
+
+
+Model created with parameter  n_blocks = 6, n_heads = 8, hidden_dim = 8, act_fn = Tanh, positional embd = Cosine, 
+Starting training ViT_Tanh_Cosine_6B8H8D!
+optimizer => Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+criterion => CrossEntropyLoss()
+learning rate => 0.0001
+epoch => 10
+Epoch: 1 (14m 37s) 	Training Loss: 2.281, 	Test Loss: 2.268,  	Training acc: 0.20, 	Test acc: 0.20, 
+Epoch: 2 (29m 14s) 	Training Loss: 2.259, 	Test Loss: 2.248,  	Training acc: 0.20, 	Test acc: 0.20, 
+Epoch: 3 (43m 51s) 	Training Loss: 2.236, 	Test Loss: 2.228,  	Training acc: 0.21, 	Test acc: 0.23, 
+Epoch: 4 (58m 28s) 	Training Loss: 2.225, 	Test Loss: 2.221,  	Training acc: 0.22, 	Test acc: 0.23, 
+Epoch: 5 (73m 4s) 	Training Loss: 2.216, 	Test Loss: 2.201,  	Training acc: 0.23, 	Test acc: 0.29, 
+Epoch: 6 (87m 41s) 	Training Loss: 2.189, 	Test Loss: 2.174,  	Training acc: 0.30, 	Test acc: 0.32, 
+Epoch: 7 (102m 10s) 	Training Loss: 2.160, 	Test Loss: 2.141,  	Training acc: 0.32, 	Test acc: 0.33, 
+Epoch: 8 (116m 38s) 	Training Loss: 2.132, 	Test Loss: 2.120,  	Training acc: 0.33, 	Test acc: 0.34, 
+Epoch: 9 (131m 6s) 	Training Loss: 2.116, 	Test Loss: 2.111,  	Training acc: 0.34, 	Test acc: 0.35, 
+Epoch: 10 (145m 32s) 	Training Loss: 2.109, 	Test Loss: 2.107,  	Training acc: 0.34, 	Test acc: 0.35, 
+Training completed in 145m 32s 	Training Loss: 2.109, 	Test Loss: 2.107,  	Training acc: 0.34, 	Test acc: 0.35, 
+Test loss: 2.11
+Test accuracy: 34.56%
+Confusion Matrix:
+Top 1 Accuracy: 32.353%
+Top 5 Accuracy: 98.52941176470588%
+Classwise Accuracy Score: 
+[0.         0.08333333 0.88       0.         0.95      ]
+
+
+***				Activation Function = GELU	Learnable Posisional Embedding = False				***
+
+
+Model created with parameter  n_blocks = 6, n_heads = 8, hidden_dim = 8, act_fn = GELU, positional embd = Cosine, 
+Starting training ViT_GELU_Cosine_6B8H8D!
+optimizer => Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+criterion => CrossEntropyLoss()
+learning rate => 0.0001
+epoch => 10
+Epoch: 1 (14m 26s) 	Training Loss: 2.260, 	Test Loss: 2.240,  	Training acc: 0.20, 	Test acc: 0.20, 
+Epoch: 2 (28m 54s) 	Training Loss: 2.232, 	Test Loss: 2.225,  	Training acc: 0.20, 	Test acc: 0.21, 
+Epoch: 3 (43m 28s) 	Training Loss: 2.222, 	Test Loss: 2.219,  	Training acc: 0.21, 	Test acc: 0.22, 
+Epoch: 4 (58m 3s) 	Training Loss: 2.218, 	Test Loss: 2.216,  	Training acc: 0.21, 	Test acc: 0.22, 
+Epoch: 5 (72m 40s) 	Training Loss: 2.216, 	Test Loss: 2.214,  	Training acc: 0.22, 	Test acc: 0.22, 
+Epoch: 6 (87m 20s) 	Training Loss: 2.213, 	Test Loss: 2.210,  	Training acc: 0.23, 	Test acc: 0.24, 
+Epoch: 7 (102m 5s) 	Training Loss: 2.207, 	Test Loss: 2.195,  	Training acc: 0.24, 	Test acc: 0.24, 
+Epoch: 8 (116m 51s) 	Training Loss: 2.164, 	Test Loss: 2.135,  	Training acc: 0.31, 	Test acc: 0.33, 
+Epoch: 9 (131m 37s) 	Training Loss: 2.128, 	Test Loss: 2.112,  	Training acc: 0.33, 	Test acc: 0.34, 
+Epoch: 10 (146m 22s) 	Training Loss: 2.112, 	Test Loss: 2.101,  	Training acc: 0.34, 	Test acc: 0.35, 
+Training completed in 146m 22s 	Training Loss: 2.112, 	Test Loss: 2.101,  	Training acc: 0.34, 	Test acc: 0.35, 
+Test loss: 2.10
+Test accuracy: 35.20%
+Confusion Matrix:
+Top 1 Accuracy: 30.882%
+Top 5 Accuracy: 100.0%
+Classwise Accuracy Score: 
+[0.86666667 0.         0.39285714 0.75       0.        ]
+
+
+***				Activation Function = ReLU	Learnable Posisional Embedding = True				***
+
+
+Model created with parameter  n_blocks = 4, n_heads = 6, hidden_dim = 12, act_fn = ReLU, positional embd = Learnable, 
+Starting training ViT_ReLU_Learnable_4B6H12D!
+optimizer => Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+criterion => CrossEntropyLoss()
+learning rate => 0.0001
+epoch => 10
+Epoch: 1 (7m 36s) 	Training Loss: 2.275, 	Test Loss: 2.245,  	Training acc: 0.21, 	Test acc: 0.20, 
+Epoch: 2 (15m 14s) 	Training Loss: 2.222, 	Test Loss: 2.198,  	Training acc: 0.22, 	Test acc: 0.26, 
+Epoch: 3 (22m 53s) 	Training Loss: 2.168, 	Test Loss: 2.140,  	Training acc: 0.29, 	Test acc: 0.35, 
+Epoch: 4 (30m 34s) 	Training Loss: 2.119, 	Test Loss: 2.107,  	Training acc: 0.35, 	Test acc: 0.35, 
+Epoch: 5 (38m 14s) 	Training Loss: 2.098, 	Test Loss: 2.089,  	Training acc: 0.35, 	Test acc: 0.35, 
+Epoch: 6 (45m 55s) 	Training Loss: 2.085, 	Test Loss: 2.077,  	Training acc: 0.37, 	Test acc: 0.38, 
+Epoch: 7 (53m 40s) 	Training Loss: 2.076, 	Test Loss: 2.069,  	Training acc: 0.39, 	Test acc: 0.39, 
+Epoch: 8 (61m 22s) 	Training Loss: 2.070, 	Test Loss: 2.062,  	Training acc: 0.39, 	Test acc: 0.39, 
+Epoch: 9 (68m 55s) 	Training Loss: 2.061, 	Test Loss: 2.052,  	Training acc: 0.40, 	Test acc: 0.40, 
+Epoch: 10 (76m 34s) 	Training Loss: 2.053, 	Test Loss: 2.046,  	Training acc: 0.40, 	Test acc: 0.41, 
+Training completed in 76m 34s 	Training Loss: 2.053, 	Test Loss: 2.046,  	Training acc: 0.40, 	Test acc: 0.41, 
+Test loss: 2.05
+Test accuracy: 40.88%
+Confusion Matrix:
+Top 1 Accuracy: 36.029%
+Top 5 Accuracy: 97.05882352941177%
+Classwise Accuracy Score: 
+[0.33333333 0.         0.20689655 0.62068966 0.73684211]
+
+
+***				Activation Function = Tanh	Learnable Posisional Embedding = True				***
+
+
+Model created with parameter  n_blocks = 4, n_heads = 6, hidden_dim = 12, act_fn = Tanh, positional embd = Learnable, 
+Starting training ViT_Tanh_Learnable_4B6H12D!
+optimizer => Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+criterion => CrossEntropyLoss()
+learning rate => 0.0001
+epoch => 10
+Epoch: 1 (7m 39s) 	Training Loss: 2.261, 	Test Loss: 2.249,  	Training acc: 0.20, 	Test acc: 0.20, 
+Epoch: 2 (15m 19s) 	Training Loss: 2.239, 	Test Loss: 2.227,  	Training acc: 0.20, 	Test acc: 0.20, 
+Epoch: 3 (22m 54s) 	Training Loss: 2.216, 	Test Loss: 2.206,  	Training acc: 0.22, 	Test acc: 0.27, 
+Epoch: 4 (30m 26s) 	Training Loss: 2.198, 	Test Loss: 2.186,  	Training acc: 0.27, 	Test acc: 0.29, 
+Epoch: 5 (38m 1s) 	Training Loss: 2.171, 	Test Loss: 2.151,  	Training acc: 0.30, 	Test acc: 0.32, 
+Epoch: 6 (45m 40s) 	Training Loss: 2.137, 	Test Loss: 2.124,  	Training acc: 0.32, 	Test acc: 0.34, 
+Epoch: 7 (53m 20s) 	Training Loss: 2.115, 	Test Loss: 2.107,  	Training acc: 0.34, 	Test acc: 0.34, 
+Epoch: 8 (61m 0s) 	Training Loss: 2.104, 	Test Loss: 2.100,  	Training acc: 0.35, 	Test acc: 0.35, 
+Epoch: 9 (68m 41s) 	Training Loss: 2.097, 	Test Loss: 2.096,  	Training acc: 0.36, 	Test acc: 0.35, 
+Epoch: 10 (76m 21s) 	Training Loss: 2.092, 	Test Loss: 2.091,  	Training acc: 0.36, 	Test acc: 0.36, 
+Training completed in 76m 21s 	Training Loss: 2.092, 	Test Loss: 2.091,  	Training acc: 0.36, 	Test acc: 0.36, 
+Test loss: 2.09
+Test accuracy: 35.64%
+Confusion Matrix:
+Top 1 Accuracy: 30.882%
+Top 5 Accuracy: 97.05882352941177%
+Classwise Accuracy Score: 
+[0.         0.         0.14705882 0.76       0.85714286]
+
+
+***				Activation Function = GELU	Learnable Posisional Embedding = True				***
+
+
+Model created with parameter  n_blocks = 4, n_heads = 6, hidden_dim = 12, act_fn = GELU, positional embd = Learnable, 
+Starting training ViT_GELU_Learnable_4B6H12D!
+optimizer => Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+criterion => CrossEntropyLoss()
+learning rate => 0.0001
+epoch => 10
+Epoch: 1 (7m 39s) 	Training Loss: 2.315, 	Test Loss: 2.273,  	Training acc: 0.10, 	Test acc: 0.20, 
+Epoch: 2 (15m 19s) 	Training Loss: 2.253, 	Test Loss: 2.239,  	Training acc: 0.20, 	Test acc: 0.20, 
+Epoch: 3 (23m 0s) 	Training Loss: 2.229, 	Test Loss: 2.214,  	Training acc: 0.20, 	Test acc: 0.20, 
+Epoch: 4 (30m 45s) 	Training Loss: 2.188, 	Test Loss: 2.156,  	Training acc: 0.28, 	Test acc: 0.31, 
+Epoch: 5 (38m 30s) 	Training Loss: 2.144, 	Test Loss: 2.124,  	Training acc: 0.31, 	Test acc: 0.33, 
+Epoch: 6 (46m 14s) 	Training Loss: 2.124, 	Test Loss: 2.112,  	Training acc: 0.33, 	Test acc: 0.34, 
+Epoch: 7 (53m 58s) 	Training Loss: 2.115, 	Test Loss: 2.106,  	Training acc: 0.33, 	Test acc: 0.34, 
+Epoch: 8 (61m 42s) 	Training Loss: 2.110, 	Test Loss: 2.101,  	Training acc: 0.34, 	Test acc: 0.35, 
+Epoch: 9 (69m 26s) 	Training Loss: 2.106, 	Test Loss: 2.098,  	Training acc: 0.34, 	Test acc: 0.35, 
+Epoch: 10 (77m 9s) 	Training Loss: 2.102, 	Test Loss: 2.095,  	Training acc: 0.34, 	Test acc: 0.35, 
+Training completed in 77m 9s 	Training Loss: 2.102, 	Test Loss: 2.095,  	Training acc: 0.34, 	Test acc: 0.35, 
+Test loss: 2.09
+Test accuracy: 35.28%
+Confusion Matrix:
+Top 1 Accuracy: 36.029%
+Top 5 Accuracy: 90.44117647058823%
+Classwise Accuracy Score: 
+[0.85294118 0.03125    0.0952381  0.85       0.        ]
+
+
+ Overall Summary : 
+
+| model                      | Positional Embed   | Activation Fn   |   Learning Rate |   Epoch |   Training Time |   Training Accuracy |   Test Accuracy |
+|:---------------------------|:-------------------|:----------------|----------------:|--------:|----------------:|--------------------:|----------------:|
+| ViT_ReLU_Cosine_6B8H8D     | Learnable PE       | ReLU            |          0.0001 |      10 |         8780.81 |            0.341854 |        0.345313 |
+| ViT_Tanh_Cosine_6B8H8D     | Learnable PE       | Tanh            |          0.0001 |      10 |         8732.59 |            0.344504 |        0.346461 |
+| ViT_GELU_Cosine_6B8H8D     | Learnable PE       | GELU            |          0.0001 |      10 |         8782.59 |            0.344921 |        0.35185  |
+| ViT_ReLU_Learnable_4B6H12D | Cosine PE          | ReLU            |          0.0001 |      10 |         4594.39 |            0.404826 |        0.40818  |
+| ViT_Tanh_Learnable_4B6H12D | Cosine PE          | Tanh            |          0.0001 |      10 |         4581.37 |            0.35704  |        0.357698 |
+| ViT_GELU_Learnable_4B6H12D | Cosine PE          | GELU            |          0.0001 |      10 |         4629.8  |            0.342744 |        0.352114 |

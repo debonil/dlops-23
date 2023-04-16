@@ -1,0 +1,331 @@
+Starting ...
+Available device ==> cuda:0
+Data Loading ...
+Files already downloaded and verified
+Files already downloaded and verified
+torch.Size([64, 3, 32, 32])
+Data Loading Done !
+
+
+***				Activation Function = ReLU	Learnable Posisional Embedding = False				***
+
+
+Model created with parameter  n_blocks = 6, n_heads = 8, hidden_dim = 8, act_fn = ReLU, positional embd = Cosine, 
+Starting training ViT_ReLU_Cosine_6B8H8D!
+optimizer => Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+criterion => CrossEntropyLoss()
+learning rate => 0.0001
+epoch => 10
+Epoch: 1 (15m 9s) 	Training Loss: 1.616, 	Test Loss: 1.597,  	Training acc: 0.22, 	Test acc: 0.31, 
+Epoch: 2 (30m 16s) 	Training Loss: 1.558, 	Test Loss: 1.524,  	Training acc: 0.32, 	Test acc: 0.34, 
+Epoch: 3 (45m 42s) 	Training Loss: 1.515, 	Test Loss: 1.503,  	Training acc: 0.35, 	Test acc: 0.38, 
+Epoch: 4 (60m 52s) 	Training Loss: 1.496, 	Test Loss: 1.486,  	Training acc: 0.38, 	Test acc: 0.39, 
+Epoch: 5 (76m 0s) 	Training Loss: 1.485, 	Test Loss: 1.477,  	Training acc: 0.39, 	Test acc: 0.40, 
+Epoch: 6 (91m 9s) 	Training Loss: 1.479, 	Test Loss: 1.469,  	Training acc: 0.40, 	Test acc: 0.41, 
+Epoch: 7 (106m 41s) 	Training Loss: 1.474, 	Test Loss: 1.469,  	Training acc: 0.41, 	Test acc: 0.41, 
+Epoch: 8 (123m 5s) 	Training Loss: 1.469, 	Test Loss: 1.460,  	Training acc: 0.41, 	Test acc: 0.42, 
+Epoch: 9 (139m 31s) 	Training Loss: 1.465, 	Test Loss: 1.455,  	Training acc: 0.42, 	Test acc: 0.43, 
+Epoch: 10 (155m 55s) 	Training Loss: 1.460, 	Test Loss: 1.450,  	Training acc: 0.43, 	Test acc: 0.44, 
+Training completed in 155m 55s 	Training Loss: 1.460, 	Test Loss: 1.450,  	Training acc: 0.43, 	Test acc: 0.44, 
+
+Model Evaluation Summary:
+Accuracy: 43.620%
+F1 Score: 41.276%
+
+Classwise Accuracy Score: 
+|   airplane |   bird |   deer |   frog |   ship |
+|-----------:|-------:|-------:|-------:|-------:|
+|      0.444 |  0.149 |  0.282 |  0.634 |  0.672 |
+
+Confusion Matrix:
+| True Label   |   airplane |   bird |   deer |   frog |   ship |
+|:-------------|-----------:|-------:|-------:|-------:|-------:|
+| airplane     |        444 |     53 |     37 |     72 |    394 |
+| bird         |        133 |    149 |    225 |    329 |    164 |
+| deer         |         38 |    115 |    282 |    430 |    135 |
+| frog         |         38 |    105 |    167 |    634 |     56 |
+| ship         |        219 |     41 |     34 |     34 |    672 |
+
+
+***				Activation Function = Tanh	Learnable Posisional Embedding = False				***
+
+
+Model created with parameter  n_blocks = 6, n_heads = 8, hidden_dim = 8, act_fn = Tanh, positional embd = Cosine, 
+Starting training ViT_Tanh_Cosine_6B8H8D!
+optimizer => Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+criterion => CrossEntropyLoss()
+learning rate => 0.0001
+epoch => 10
+Epoch: 1 (16m 23s) 	Training Loss: 1.614, 	Test Loss: 1.608,  	Training acc: 0.20, 	Test acc: 0.27, 
+Epoch: 2 (32m 38s) 	Training Loss: 1.603, 	Test Loss: 1.592,  	Training acc: 0.28, 	Test acc: 0.31, 
+Epoch: 3 (48m 44s) 	Training Loss: 1.546, 	Test Loss: 1.507,  	Training acc: 0.34, 	Test acc: 0.37, 
+Epoch: 4 (65m 10s) 	Training Loss: 1.498, 	Test Loss: 1.490,  	Training acc: 0.40, 	Test acc: 0.40, 
+Epoch: 5 (81m 22s) 	Training Loss: 1.489, 	Test Loss: 1.484,  	Training acc: 0.40, 	Test acc: 0.42, 
+Epoch: 6 (97m 19s) 	Training Loss: 1.483, 	Test Loss: 1.475,  	Training acc: 0.41, 	Test acc: 0.42, 
+Epoch: 7 (113m 0s) 	Training Loss: 1.475, 	Test Loss: 1.464,  	Training acc: 0.41, 	Test acc: 0.42, 
+Epoch: 8 (128m 51s) 	Training Loss: 1.468, 	Test Loss: 1.458,  	Training acc: 0.41, 	Test acc: 0.43, 
+Epoch: 9 (144m 43s) 	Training Loss: 1.464, 	Test Loss: 1.457,  	Training acc: 0.41, 	Test acc: 0.43, 
+Epoch: 10 (160m 38s) 	Training Loss: 1.461, 	Test Loss: 1.455,  	Training acc: 0.42, 	Test acc: 0.43, 
+Training completed in 160m 38s 	Training Loss: 1.461, 	Test Loss: 1.455,  	Training acc: 0.42, 	Test acc: 0.43, 
+
+Model Evaluation Summary:
+Accuracy: 42.900%
+F1 Score: 41.354%
+
+Classwise Accuracy Score: 
+|   airplane |   bird |   deer |   frog |   ship |
+|-----------:|-------:|-------:|-------:|-------:|
+|      0.417 |   0.18 |  0.279 |  0.584 |  0.685 |
+
+Confusion Matrix:
+| True Label   |   airplane |   bird |   deer |   frog |   ship |
+|:-------------|-----------:|-------:|-------:|-------:|-------:|
+| airplane     |        417 |     85 |     78 |     63 |    357 |
+| bird         |        117 |    180 |    215 |    377 |    111 |
+| deer         |         38 |    128 |    279 |    465 |     90 |
+| frog         |         28 |    124 |    224 |    584 |     40 |
+| ship         |        138 |     52 |     78 |     47 |    685 |
+
+
+***				Activation Function = GELU	Learnable Posisional Embedding = False				***
+
+
+Model created with parameter  n_blocks = 6, n_heads = 8, hidden_dim = 8, act_fn = GELU, positional embd = Cosine, 
+Starting training ViT_GELU_Cosine_6B8H8D!
+optimizer => Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+criterion => CrossEntropyLoss()
+learning rate => 0.0001
+epoch => 10
+Epoch: 1 (16m 20s) 	Training Loss: 1.599, 	Test Loss: 1.571,  	Training acc: 0.27, 	Test acc: 0.31, 
+Epoch: 2 (32m 36s) 	Training Loss: 1.535, 	Test Loss: 1.503,  	Training acc: 0.33, 	Test acc: 0.37, 
+Epoch: 3 (48m 54s) 	Training Loss: 1.498, 	Test Loss: 1.487,  	Training acc: 0.37, 	Test acc: 0.38, 
+Epoch: 4 (65m 3s) 	Training Loss: 1.486, 	Test Loss: 1.478,  	Training acc: 0.39, 	Test acc: 0.39, 
+Epoch: 5 (81m 19s) 	Training Loss: 1.480, 	Test Loss: 1.473,  	Training acc: 0.40, 	Test acc: 0.40, 
+Epoch: 6 (97m 30s) 	Training Loss: 1.476, 	Test Loss: 1.471,  	Training acc: 0.40, 	Test acc: 0.40, 
+Epoch: 7 (113m 40s) 	Training Loss: 1.473, 	Test Loss: 1.468,  	Training acc: 0.40, 	Test acc: 0.41, 
+Epoch: 8 (129m 44s) 	Training Loss: 1.470, 	Test Loss: 1.465,  	Training acc: 0.41, 	Test acc: 0.41, 
+Epoch: 9 (145m 51s) 	Training Loss: 1.468, 	Test Loss: 1.462,  	Training acc: 0.41, 	Test acc: 0.41, 
+Epoch: 10 (160m 58s) 	Training Loss: 1.466, 	Test Loss: 1.459,  	Training acc: 0.41, 	Test acc: 0.42, 
+Training completed in 160m 58s 	Training Loss: 1.466, 	Test Loss: 1.459,  	Training acc: 0.41, 	Test acc: 0.42, 
+
+Model Evaluation Summary:
+Accuracy: 41.960%
+F1 Score: 40.536%
+
+Classwise Accuracy Score: 
+|   airplane |   bird |   deer |   frog |   ship |
+|-----------:|-------:|-------:|-------:|-------:|
+|      0.389 |  0.165 |  0.379 |  0.466 |  0.699 |
+
+Confusion Matrix:
+| True Label   |   airplane |   bird |   deer |   frog |   ship |
+|:-------------|-----------:|-------:|-------:|-------:|-------:|
+| airplane     |        389 |     89 |     58 |     38 |    426 |
+| bird         |        113 |    165 |    310 |    221 |    191 |
+| deer         |         26 |    150 |    379 |    293 |    152 |
+| frog         |         18 |    129 |    289 |    466 |     98 |
+| ship         |        174 |     82 |     30 |     15 |    699 |
+
+
+***				Activation Function = ReLU	Learnable Posisional Embedding = True				***
+
+
+Model created with parameter  n_blocks = 4, n_heads = 6, hidden_dim = 12, act_fn = ReLU, positional embd = Learnable, 
+Starting training ViT_ReLU_Learnable_4B6H12D!
+optimizer => Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+criterion => CrossEntropyLoss()
+learning rate => 0.0001
+epoch => 10
+Epoch: 1 (7m 37s) 	Training Loss: 1.580, 	Test Loss: 1.526,  	Training acc: 0.28, 	Test acc: 0.33, 
+Epoch: 2 (15m 21s) 	Training Loss: 1.507, 	Test Loss: 1.489,  	Training acc: 0.36, 	Test acc: 0.39, 
+Epoch: 3 (23m 4s) 	Training Loss: 1.487, 	Test Loss: 1.478,  	Training acc: 0.39, 	Test acc: 0.40, 
+Epoch: 4 (30m 49s) 	Training Loss: 1.477, 	Test Loss: 1.467,  	Training acc: 0.40, 	Test acc: 0.41, 
+Epoch: 5 (38m 32s) 	Training Loss: 1.469, 	Test Loss: 1.458,  	Training acc: 0.41, 	Test acc: 0.42, 
+Epoch: 6 (46m 9s) 	Training Loss: 1.461, 	Test Loss: 1.452,  	Training acc: 0.42, 	Test acc: 0.43, 
+Epoch: 7 (53m 47s) 	Training Loss: 1.454, 	Test Loss: 1.441,  	Training acc: 0.43, 	Test acc: 0.44, 
+Epoch: 8 (61m 23s) 	Training Loss: 1.447, 	Test Loss: 1.439,  	Training acc: 0.43, 	Test acc: 0.45, 
+Epoch: 9 (69m 0s) 	Training Loss: 1.444, 	Test Loss: 1.439,  	Training acc: 0.44, 	Test acc: 0.45, 
+Epoch: 10 (76m 36s) 	Training Loss: 1.439, 	Test Loss: 1.431,  	Training acc: 0.45, 	Test acc: 0.46, 
+Training completed in 76m 36s 	Training Loss: 1.439, 	Test Loss: 1.431,  	Training acc: 0.45, 	Test acc: 0.46, 
+
+Model Evaluation Summary:
+Accuracy: 45.600%
+F1 Score: 42.631%
+
+Classwise Accuracy Score: 
+|   airplane |   bird |   deer |   frog |   ship |
+|-----------:|-------:|-------:|-------:|-------:|
+|      0.423 |  0.106 |  0.291 |  0.762 |  0.698 |
+
+Confusion Matrix:
+| True Label   |   airplane |   bird |   deer |   frog |   ship |
+|:-------------|-----------:|-------:|-------:|-------:|-------:|
+| airplane     |        423 |     82 |     32 |    133 |    330 |
+| bird         |        127 |    106 |    185 |    487 |     95 |
+| deer         |         44 |     95 |    291 |    505 |     65 |
+| frog         |         22 |     64 |    127 |    762 |     25 |
+| ship         |        112 |     81 |     50 |     59 |    698 |
+
+
+***				Activation Function = Tanh	Learnable Posisional Embedding = True				***
+
+
+Model created with parameter  n_blocks = 4, n_heads = 6, hidden_dim = 12, act_fn = Tanh, positional embd = Learnable, 
+Starting training ViT_Tanh_Learnable_4B6H12D!
+optimizer => Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+criterion => CrossEntropyLoss()
+learning rate => 0.0001
+epoch => 10
+Epoch: 1 (7m 35s) 	Training Loss: 1.549, 	Test Loss: 1.502,  	Training acc: 0.32, 	Test acc: 0.37, 
+Epoch: 2 (15m 10s) 	Training Loss: 1.494, 	Test Loss: 1.481,  	Training acc: 0.38, 	Test acc: 0.40, 
+Epoch: 3 (22m 47s) 	Training Loss: 1.481, 	Test Loss: 1.469,  	Training acc: 0.39, 	Test acc: 0.41, 
+Epoch: 4 (30m 24s) 	Training Loss: 1.474, 	Test Loss: 1.466,  	Training acc: 0.40, 	Test acc: 0.41, 
+Epoch: 5 (38m 0s) 	Training Loss: 1.470, 	Test Loss: 1.463,  	Training acc: 0.41, 	Test acc: 0.41, 
+Epoch: 6 (45m 36s) 	Training Loss: 1.466, 	Test Loss: 1.454,  	Training acc: 0.41, 	Test acc: 0.42, 
+Epoch: 7 (53m 11s) 	Training Loss: 1.459, 	Test Loss: 1.448,  	Training acc: 0.42, 	Test acc: 0.44, 
+Epoch: 8 (60m 45s) 	Training Loss: 1.452, 	Test Loss: 1.441,  	Training acc: 0.43, 	Test acc: 0.45, 
+Epoch: 9 (68m 20s) 	Training Loss: 1.445, 	Test Loss: 1.430,  	Training acc: 0.45, 	Test acc: 0.46, 
+Epoch: 10 (75m 55s) 	Training Loss: 1.440, 	Test Loss: 1.435,  	Training acc: 0.45, 	Test acc: 0.46, 
+Training completed in 75m 55s 	Training Loss: 1.440, 	Test Loss: 1.435,  	Training acc: 0.45, 	Test acc: 0.46, 
+
+Model Evaluation Summary:
+Accuracy: 45.720%
+F1 Score: 41.198%
+
+Classwise Accuracy Score: 
+|   airplane |   bird |   deer |   frog |   ship |
+|-----------:|-------:|-------:|-------:|-------:|
+|      0.355 |  0.059 |  0.358 |  0.697 |  0.817 |
+
+Confusion Matrix:
+| True Label   |   airplane |   bird |   deer |   frog |   ship |
+|:-------------|-----------:|-------:|-------:|-------:|-------:|
+| airplane     |        355 |     36 |     31 |     89 |    489 |
+| bird         |         96 |     59 |    218 |    410 |    217 |
+| deer         |         39 |     40 |    358 |    436 |    127 |
+| frog         |         21 |     40 |    148 |    697 |     94 |
+| ship         |         86 |     17 |     32 |     48 |    817 |
+
+
+***				Activation Function = GELU	Learnable Posisional Embedding = True				***
+
+
+Model created with parameter  n_blocks = 4, n_heads = 6, hidden_dim = 12, act_fn = GELU, positional embd = Learnable, 
+Starting training ViT_GELU_Learnable_4B6H12D!
+optimizer => Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: False
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0
+)
+criterion => CrossEntropyLoss()
+learning rate => 0.0001
+epoch => 10
+Epoch: 1 (7m 35s) 	Training Loss: 1.602, 	Test Loss: 1.571,  	Training acc: 0.26, 	Test acc: 0.28, 
+Epoch: 2 (15m 10s) 	Training Loss: 1.526, 	Test Loss: 1.495,  	Training acc: 0.34, 	Test acc: 0.38, 
+Epoch: 3 (22m 46s) 	Training Loss: 1.490, 	Test Loss: 1.477,  	Training acc: 0.39, 	Test acc: 0.40, 
+Epoch: 4 (30m 23s) 	Training Loss: 1.477, 	Test Loss: 1.467,  	Training acc: 0.40, 	Test acc: 0.41, 
+Epoch: 5 (38m 0s) 	Training Loss: 1.468, 	Test Loss: 1.457,  	Training acc: 0.41, 	Test acc: 0.43, 
+Epoch: 6 (45m 42s) 	Training Loss: 1.461, 	Test Loss: 1.452,  	Training acc: 0.42, 	Test acc: 0.44, 
+Epoch: 7 (53m 24s) 	Training Loss: 1.453, 	Test Loss: 1.441,  	Training acc: 0.43, 	Test acc: 0.45, 
+Epoch: 8 (61m 5s) 	Training Loss: 1.444, 	Test Loss: 1.429,  	Training acc: 0.44, 	Test acc: 0.46, 
+Epoch: 9 (68m 45s) 	Training Loss: 1.436, 	Test Loss: 1.422,  	Training acc: 0.45, 	Test acc: 0.47, 
+Epoch: 10 (76m 27s) 	Training Loss: 1.431, 	Test Loss: 1.421,  	Training acc: 0.46, 	Test acc: 0.46, 
+Training completed in 76m 27s 	Training Loss: 1.431, 	Test Loss: 1.421,  	Training acc: 0.46, 	Test acc: 0.46, 
+
+Model Evaluation Summary:
+Accuracy: 46.440%
+F1 Score: 44.265%
+
+Classwise Accuracy Score: 
+|   airplane |   bird |   deer |   frog |   ship |
+|-----------:|-------:|-------:|-------:|-------:|
+|      0.462 |  0.159 |  0.355 |  0.558 |  0.788 |
+
+Confusion Matrix:
+| True Label   |   airplane |   bird |   deer |   frog |   ship |
+|:-------------|-----------:|-------:|-------:|-------:|-------:|
+| airplane     |        462 |     60 |     37 |     63 |    378 |
+| bird         |        140 |    159 |    254 |    264 |    183 |
+| deer         |         64 |    137 |    355 |    339 |    105 |
+| frog         |         50 |    128 |    197 |    558 |     67 |
+| ship         |        107 |     33 |     33 |     39 |    788 |
+
+
+ Overall Summary : 
+
+| model                      | Positional Embed   | Activation Fn   |   Learning Rate |   Epoch |   Training Time |   Training Accuracy |   Test Accuracy |
+|:---------------------------|:-------------------|:----------------|----------------:|--------:|----------------:|--------------------:|----------------:|
+| ViT_ReLU_Cosine_6B8H8D     | Cosine PE          | ReLU            |          0.0001 |      10 |         9355.13 |            0.426543 |        0.439676 |
+| ViT_Tanh_Cosine_6B8H8D     | Cosine PE          | Tanh            |          0.0001 |      10 |         9638.37 |            0.417551 |        0.431171 |
+| ViT_GELU_Cosine_6B8H8D     | Cosine PE          | GELU            |          0.0001 |      10 |         9658.27 |            0.414354 |        0.419106 |
+| ViT_ReLU_Learnable_4B6H12D | Learnable PE       | ReLU            |          0.0001 |      10 |         4596.73 |            0.446363 |        0.457872 |
+| ViT_Tanh_Learnable_4B6H12D | Learnable PE       | Tanh            |          0.0001 |      10 |         4555.46 |            0.446675 |        0.457674 |
+| ViT_GELU_Learnable_4B6H12D | Learnable PE       | GELU            |          0.0001 |      10 |         4587.07 |            0.455675 |        0.464794 |

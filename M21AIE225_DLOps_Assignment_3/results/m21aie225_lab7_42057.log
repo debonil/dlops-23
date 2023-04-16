@@ -1,0 +1,289 @@
+cuda:0
+Starting ...
+Files already downloaded and verified
+Files already downloaded and verified
+Data Loading Done !
+Model created!
+MyViT(
+  (linear_mapper): Linear(in_features=48, out_features=8, bias=True)
+  (blocks): ModuleList(
+    (0): MyViTBlock(
+      (norm1): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+      (mhsa): MyMSA(
+        (q_mappings): ModuleList(
+          (0): Linear(in_features=1, out_features=1, bias=True)
+          (1): Linear(in_features=1, out_features=1, bias=True)
+          (2): Linear(in_features=1, out_features=1, bias=True)
+          (3): Linear(in_features=1, out_features=1, bias=True)
+          (4): Linear(in_features=1, out_features=1, bias=True)
+          (5): Linear(in_features=1, out_features=1, bias=True)
+          (6): Linear(in_features=1, out_features=1, bias=True)
+          (7): Linear(in_features=1, out_features=1, bias=True)
+        )
+        (k_mappings): ModuleList(
+          (0): Linear(in_features=1, out_features=1, bias=True)
+          (1): Linear(in_features=1, out_features=1, bias=True)
+          (2): Linear(in_features=1, out_features=1, bias=True)
+          (3): Linear(in_features=1, out_features=1, bias=True)
+          (4): Linear(in_features=1, out_features=1, bias=True)
+          (5): Linear(in_features=1, out_features=1, bias=True)
+          (6): Linear(in_features=1, out_features=1, bias=True)
+          (7): Linear(in_features=1, out_features=1, bias=True)
+        )
+        (v_mappings): ModuleList(
+          (0): Linear(in_features=1, out_features=1, bias=True)
+          (1): Linear(in_features=1, out_features=1, bias=True)
+          (2): Linear(in_features=1, out_features=1, bias=True)
+          (3): Linear(in_features=1, out_features=1, bias=True)
+          (4): Linear(in_features=1, out_features=1, bias=True)
+          (5): Linear(in_features=1, out_features=1, bias=True)
+          (6): Linear(in_features=1, out_features=1, bias=True)
+          (7): Linear(in_features=1, out_features=1, bias=True)
+        )
+        (softmax): Softmax(dim=-1)
+      )
+      (norm2): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+      (mlp): Sequential(
+        (0): Linear(in_features=8, out_features=32, bias=True)
+        (1): GELU(approximate='none')
+        (2): Linear(in_features=32, out_features=8, bias=True)
+      )
+    )
+    (1): MyViTBlock(
+      (norm1): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+      (mhsa): MyMSA(
+        (q_mappings): ModuleList(
+          (0): Linear(in_features=1, out_features=1, bias=True)
+          (1): Linear(in_features=1, out_features=1, bias=True)
+          (2): Linear(in_features=1, out_features=1, bias=True)
+          (3): Linear(in_features=1, out_features=1, bias=True)
+          (4): Linear(in_features=1, out_features=1, bias=True)
+          (5): Linear(in_features=1, out_features=1, bias=True)
+          (6): Linear(in_features=1, out_features=1, bias=True)
+          (7): Linear(in_features=1, out_features=1, bias=True)
+        )
+        (k_mappings): ModuleList(
+          (0): Linear(in_features=1, out_features=1, bias=True)
+          (1): Linear(in_features=1, out_features=1, bias=True)
+          (2): Linear(in_features=1, out_features=1, bias=True)
+          (3): Linear(in_features=1, out_features=1, bias=True)
+          (4): Linear(in_features=1, out_features=1, bias=True)
+          (5): Linear(in_features=1, out_features=1, bias=True)
+          (6): Linear(in_features=1, out_features=1, bias=True)
+          (7): Linear(in_features=1, out_features=1, bias=True)
+        )
+        (v_mappings): ModuleList(
+          (0): Linear(in_features=1, out_features=1, bias=True)
+          (1): Linear(in_features=1, out_features=1, bias=True)
+          (2): Linear(in_features=1, out_features=1, bias=True)
+          (3): Linear(in_features=1, out_features=1, bias=True)
+          (4): Linear(in_features=1, out_features=1, bias=True)
+          (5): Linear(in_features=1, out_features=1, bias=True)
+          (6): Linear(in_features=1, out_features=1, bias=True)
+          (7): Linear(in_features=1, out_features=1, bias=True)
+        )
+        (softmax): Softmax(dim=-1)
+      )
+      (norm2): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+      (mlp): Sequential(
+        (0): Linear(in_features=8, out_features=32, bias=True)
+        (1): GELU(approximate='none')
+        (2): Linear(in_features=32, out_features=8, bias=True)
+      )
+    )
+    (2): MyViTBlock(
+      (norm1): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+      (mhsa): MyMSA(
+        (q_mappings): ModuleList(
+          (0): Linear(in_features=1, out_features=1, bias=True)
+          (1): Linear(in_features=1, out_features=1, bias=True)
+          (2): Linear(in_features=1, out_features=1, bias=True)
+          (3): Linear(in_features=1, out_features=1, bias=True)
+          (4): Linear(in_features=1, out_features=1, bias=True)
+          (5): Linear(in_features=1, out_features=1, bias=True)
+          (6): Linear(in_features=1, out_features=1, bias=True)
+          (7): Linear(in_features=1, out_features=1, bias=True)
+        )
+        (k_mappings): ModuleList(
+          (0): Linear(in_features=1, out_features=1, bias=True)
+          (1): Linear(in_features=1, out_features=1, bias=True)
+          (2): Linear(in_features=1, out_features=1, bias=True)
+          (3): Linear(in_features=1, out_features=1, bias=True)
+          (4): Linear(in_features=1, out_features=1, bias=True)
+          (5): Linear(in_features=1, out_features=1, bias=True)
+          (6): Linear(in_features=1, out_features=1, bias=True)
+          (7): Linear(in_features=1, out_features=1, bias=True)
+        )
+        (v_mappings): ModuleList(
+          (0): Linear(in_features=1, out_features=1, bias=True)
+          (1): Linear(in_features=1, out_features=1, bias=True)
+          (2): Linear(in_features=1, out_features=1, bias=True)
+          (3): Linear(in_features=1, out_features=1, bias=True)
+          (4): Linear(in_features=1, out_features=1, bias=True)
+          (5): Linear(in_features=1, out_features=1, bias=True)
+          (6): Linear(in_features=1, out_features=1, bias=True)
+          (7): Linear(in_features=1, out_features=1, bias=True)
+        )
+        (softmax): Softmax(dim=-1)
+      )
+      (norm2): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+      (mlp): Sequential(
+        (0): Linear(in_features=8, out_features=32, bias=True)
+        (1): GELU(approximate='none')
+        (2): Linear(in_features=32, out_features=8, bias=True)
+      )
+    )
+    (3): MyViTBlock(
+      (norm1): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+      (mhsa): MyMSA(
+        (q_mappings): ModuleList(
+          (0): Linear(in_features=1, out_features=1, bias=True)
+          (1): Linear(in_features=1, out_features=1, bias=True)
+          (2): Linear(in_features=1, out_features=1, bias=True)
+          (3): Linear(in_features=1, out_features=1, bias=True)
+          (4): Linear(in_features=1, out_features=1, bias=True)
+          (5): Linear(in_features=1, out_features=1, bias=True)
+          (6): Linear(in_features=1, out_features=1, bias=True)
+          (7): Linear(in_features=1, out_features=1, bias=True)
+        )
+        (k_mappings): ModuleList(
+          (0): Linear(in_features=1, out_features=1, bias=True)
+          (1): Linear(in_features=1, out_features=1, bias=True)
+          (2): Linear(in_features=1, out_features=1, bias=True)
+          (3): Linear(in_features=1, out_features=1, bias=True)
+          (4): Linear(in_features=1, out_features=1, bias=True)
+          (5): Linear(in_features=1, out_features=1, bias=True)
+          (6): Linear(in_features=1, out_features=1, bias=True)
+          (7): Linear(in_features=1, out_features=1, bias=True)
+        )
+        (v_mappings): ModuleList(
+          (0): Linear(in_features=1, out_features=1, bias=True)
+          (1): Linear(in_features=1, out_features=1, bias=True)
+          (2): Linear(in_features=1, out_features=1, bias=True)
+          (3): Linear(in_features=1, out_features=1, bias=True)
+          (4): Linear(in_features=1, out_features=1, bias=True)
+          (5): Linear(in_features=1, out_features=1, bias=True)
+          (6): Linear(in_features=1, out_features=1, bias=True)
+          (7): Linear(in_features=1, out_features=1, bias=True)
+        )
+        (softmax): Softmax(dim=-1)
+      )
+      (norm2): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+      (mlp): Sequential(
+        (0): Linear(in_features=8, out_features=32, bias=True)
+        (1): GELU(approximate='none')
+        (2): Linear(in_features=32, out_features=8, bias=True)
+      )
+    )
+    (4): MyViTBlock(
+      (norm1): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+      (mhsa): MyMSA(
+        (q_mappings): ModuleList(
+          (0): Linear(in_features=1, out_features=1, bias=True)
+          (1): Linear(in_features=1, out_features=1, bias=True)
+          (2): Linear(in_features=1, out_features=1, bias=True)
+          (3): Linear(in_features=1, out_features=1, bias=True)
+          (4): Linear(in_features=1, out_features=1, bias=True)
+          (5): Linear(in_features=1, out_features=1, bias=True)
+          (6): Linear(in_features=1, out_features=1, bias=True)
+          (7): Linear(in_features=1, out_features=1, bias=True)
+        )
+        (k_mappings): ModuleList(
+          (0): Linear(in_features=1, out_features=1, bias=True)
+          (1): Linear(in_features=1, out_features=1, bias=True)
+          (2): Linear(in_features=1, out_features=1, bias=True)
+          (3): Linear(in_features=1, out_features=1, bias=True)
+          (4): Linear(in_features=1, out_features=1, bias=True)
+          (5): Linear(in_features=1, out_features=1, bias=True)
+          (6): Linear(in_features=1, out_features=1, bias=True)
+          (7): Linear(in_features=1, out_features=1, bias=True)
+        )
+        (v_mappings): ModuleList(
+          (0): Linear(in_features=1, out_features=1, bias=True)
+          (1): Linear(in_features=1, out_features=1, bias=True)
+          (2): Linear(in_features=1, out_features=1, bias=True)
+          (3): Linear(in_features=1, out_features=1, bias=True)
+          (4): Linear(in_features=1, out_features=1, bias=True)
+          (5): Linear(in_features=1, out_features=1, bias=True)
+          (6): Linear(in_features=1, out_features=1, bias=True)
+          (7): Linear(in_features=1, out_features=1, bias=True)
+        )
+        (softmax): Softmax(dim=-1)
+      )
+      (norm2): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+      (mlp): Sequential(
+        (0): Linear(in_features=8, out_features=32, bias=True)
+        (1): GELU(approximate='none')
+        (2): Linear(in_features=32, out_features=8, bias=True)
+      )
+    )
+    (5): MyViTBlock(
+      (norm1): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+      (mhsa): MyMSA(
+        (q_mappings): ModuleList(
+          (0): Linear(in_features=1, out_features=1, bias=True)
+          (1): Linear(in_features=1, out_features=1, bias=True)
+          (2): Linear(in_features=1, out_features=1, bias=True)
+          (3): Linear(in_features=1, out_features=1, bias=True)
+          (4): Linear(in_features=1, out_features=1, bias=True)
+          (5): Linear(in_features=1, out_features=1, bias=True)
+          (6): Linear(in_features=1, out_features=1, bias=True)
+          (7): Linear(in_features=1, out_features=1, bias=True)
+        )
+        (k_mappings): ModuleList(
+          (0): Linear(in_features=1, out_features=1, bias=True)
+          (1): Linear(in_features=1, out_features=1, bias=True)
+          (2): Linear(in_features=1, out_features=1, bias=True)
+          (3): Linear(in_features=1, out_features=1, bias=True)
+          (4): Linear(in_features=1, out_features=1, bias=True)
+          (5): Linear(in_features=1, out_features=1, bias=True)
+          (6): Linear(in_features=1, out_features=1, bias=True)
+          (7): Linear(in_features=1, out_features=1, bias=True)
+        )
+        (v_mappings): ModuleList(
+          (0): Linear(in_features=1, out_features=1, bias=True)
+          (1): Linear(in_features=1, out_features=1, bias=True)
+          (2): Linear(in_features=1, out_features=1, bias=True)
+          (3): Linear(in_features=1, out_features=1, bias=True)
+          (4): Linear(in_features=1, out_features=1, bias=True)
+          (5): Linear(in_features=1, out_features=1, bias=True)
+          (6): Linear(in_features=1, out_features=1, bias=True)
+          (7): Linear(in_features=1, out_features=1, bias=True)
+        )
+        (softmax): Softmax(dim=-1)
+      )
+      (norm2): LayerNorm((8,), eps=1e-05, elementwise_affine=True)
+      (mlp): Sequential(
+        (0): Linear(in_features=8, out_features=32, bias=True)
+        (1): GELU(approximate='none')
+        (2): Linear(in_features=32, out_features=8, bias=True)
+      )
+    )
+  )
+  (mlp): Sequential(
+    (0): Linear(in_features=8, out_features=10, bias=True)
+    (1): Softmax(dim=-1)
+  )
+)
+Starting training !
+Epoch: 1 (29m 1s) 	Training Loss: 2.194, 	Test Loss: 2.135,  	Training acc: 0.25, 	Test acc: 0.32, 
+Epoch: 2 (58m 11s) 	Training Loss: 2.131, 	Test Loss: 2.106,  	Training acc: 0.32, 	Test acc: 0.35, 
+Epoch: 3 (87m 20s) 	Training Loss: 2.111, 	Test Loss: 2.134,  	Training acc: 0.34, 	Test acc: 0.32, 
+Epoch: 4 (116m 2s) 	Training Loss: 2.101, 	Test Loss: 2.087,  	Training acc: 0.35, 	Test acc: 0.37, 
+Epoch: 5 (145m 21s) 	Training Loss: 2.092, 	Test Loss: 2.082,  	Training acc: 0.36, 	Test acc: 0.37, 
+Epoch: 6 (174m 34s) 	Training Loss: 2.085, 	Test Loss: 2.069,  	Training acc: 0.37, 	Test acc: 0.38, 
+Epoch: 7 (203m 31s) 	Training Loss: 2.080, 	Test Loss: 2.071,  	Training acc: 0.37, 	Test acc: 0.38, 
+Epoch: 8 (232m 14s) 	Training Loss: 2.075, 	Test Loss: 2.072,  	Training acc: 0.38, 	Test acc: 0.38, 
+Epoch: 9 (260m 56s) 	Training Loss: 2.073, 	Test Loss: 2.066,  	Training acc: 0.38, 	Test acc: 0.39, 
+Epoch: 10 (289m 39s) 	Training Loss: 2.068, 	Test Loss: 2.072,  	Training acc: 0.39, 	Test acc: 0.38, 
+M21AIE225_DLOps_Assignment_3_Q_1.py:89: RuntimeWarning: invalid value encountered in true_divide
+  classwiseAccuracy = cm.diagonal()/cm.sum(axis=1)
+Training completed in 289m 39s 	Training Loss: 2.068, 	Test Loss: 2.072,  	Training acc: 0.39, 	Test acc: 0.38, 
+Test loss: 2.07
+Test accuracy: 37.95%
+Confusion Matrix
+Top 1 Accuracy: 50.000%
+Top 5 Accuracy: 93.75%
+Classwise Accuracy Score: 
+[0.66666667 0.         0.         0.         1.                nan
+ 1.        ]
