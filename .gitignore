@@ -131,3 +131,5 @@ runs
 .data
 *.zip
 *.wmv
+lab-8/wandb
+lab-8/data
