@@ -1,0 +1,923 @@
+[32m[I 2023-04-23 22:45:45,287][0m A new study created in memory with name: no-name-937d6c92-932d-4b32-ac1d-98fb99e60882[0m
+Available device ==> cuda:0
+Model ====> cnn_model_conv_3_lr_1e-05_epochs_15
+Epoch: 1 (0m 28s) 	Training Loss: 1.621, 	Test Loss: 1.587,  	Training acc: 0.85, 	Test acc: 0.88, 
+Epoch: 2 (0m 26s) 	Training Loss: 1.565, 	Test Loss: 1.567,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 26s) 	Training Loss: 1.550, 	Test Loss: 1.565,  	Training acc: 0.91, 	Test acc: 0.90, 
+Epoch: 4 (0m 26s) 	Training Loss: 1.540, 	Test Loss: 1.568,  	Training acc: 0.92, 	Test acc: 0.89, 
+Epoch: 5 (0m 26s) 	Training Loss: 1.533, 	Test Loss: 1.556,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 6 (0m 26s) 	Training Loss: 1.526, 	Test Loss: 1.551,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 7 (0m 26s) 	Training Loss: 1.520, 	Test Loss: 1.547,  	Training acc: 0.94, 	Test acc: 0.92, 
+Epoch: 8 (0m 26s) 	Training Loss: 1.516, 	Test Loss: 1.547,  	Training acc: 0.95, 	Test acc: 0.92, 
+Epoch: 9 (0m 26s) 	Training Loss: 1.511, 	Test Loss: 1.548,  	Training acc: 0.95, 	Test acc: 0.91, 
+Epoch: 10 (0m 26s) 	Training Loss: 1.508, 	Test Loss: 1.543,  	Training acc: 0.96, 	Test acc: 0.92, 
+Epoch: 11 (0m 26s) 	Training Loss: 1.505, 	Test Loss: 1.542,  	Training acc: 0.96, 	Test acc: 0.92, 
+Epoch: 12 (0m 26s) 	Training Loss: 1.502, 	Test Loss: 1.543,  	Training acc: 0.96, 	Test acc: 0.92, 
+Epoch: 13 (0m 26s) 	Training Loss: 1.501, 	Test Loss: 1.541,  	Training acc: 0.96, 	Test acc: 0.92, 
+Epoch: 14 (0m 26s) 	Training Loss: 1.498, 	Test Loss: 1.544,  	Training acc: 0.96, 	Test acc: 0.92, 
+Epoch: 15 (0m 26s) 	Training Loss: 1.495, 	Test Loss: 1.545,  	Training acc: 0.97, 	Test acc: 0.92, 
+[32m[I 2023-04-23 22:52:38,173][0m Trial 0 finished with value: 0.9179 and parameters: {'conv_layer': 3, 'lr': 1.0027518177872112e-05, 'num_epochs': 15}. Best is trial 0 with value: 0.9179.[0m
+Training completed in 6m 39s 	Training Loss: 1.495, 	Test Loss: 1.545,  	Training acc: 0.97, 	Test acc: 0.92, 
+
+Model Evaluation Summary:
+Accuracy: 91.790%
+F1 Score: 91.660%
+
+Classwise Accuracy Score: 
+|   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+|         0.927 |     0.983 |      0.892 |   0.901 |  0.912 |     0.98 |   0.662 |     0.987 | 0.985 |         0.95 |
+
+Confusion Matrix:
+| True Label   |   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|:-------------|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+| T-shirt/top  |           927 |         1 |         18 |       7 |      3 |        1 |      36 |         0 |     7 |            0 |
+| Trouser      |             2 |       983 |          1 |       7 |      4 |        0 |       2 |         0 |     1 |            0 |
+| Pullover     |            22 |         1 |        892 |       6 |     48 |        1 |      27 |         0 |     3 |            0 |
+| Dress        |            28 |         2 |         16 |     901 |     30 |        0 |      19 |         0 |     4 |            0 |
+| Coat         |             1 |         1 |         32 |      17 |    912 |        0 |      37 |         0 |     0 |            0 |
+| Sandal       |             0 |         0 |          1 |       0 |      0 |      980 |       0 |        13 |     1 |            5 |
+| Shirt        |           159 |         1 |         61 |      22 |     85 |        1 |     662 |         0 |     9 |            0 |
+| Sneaker      |             0 |         0 |          0 |       0 |      0 |        3 |       0 |       987 |     0 |           10 |
+| Bag          |             3 |         2 |          2 |       1 |      3 |        2 |       1 |         1 |   985 |            0 |
+| Ankle boot   |             0 |         0 |          0 |       0 |      0 |        7 |       1 |        41 |     1 |          950 |
+Model ====> cnn_model_conv_3_lr_1.92e-05_epochs_11
+Epoch: 1 (0m 26s) 	Training Loss: 1.649, 	Test Loss: 1.641,  	Training acc: 0.82, 	Test acc: 0.82, 
+Epoch: 2 (0m 26s) 	Training Loss: 1.618, 	Test Loss: 1.625,  	Training acc: 0.84, 	Test acc: 0.84, 
+Epoch: 3 (0m 26s) 	Training Loss: 1.580, 	Test Loss: 1.566,  	Training acc: 0.88, 	Test acc: 0.90, 
+Epoch: 4 (0m 24s) 	Training Loss: 1.551, 	Test Loss: 1.556,  	Training acc: 0.91, 	Test acc: 0.91, 
+Epoch: 5 (0m 24s) 	Training Loss: 1.539, 	Test Loss: 1.555,  	Training acc: 0.92, 	Test acc: 0.91, 
+Epoch: 6 (0m 24s) 	Training Loss: 1.533, 	Test Loss: 1.553,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 7 (0m 24s) 	Training Loss: 1.527, 	Test Loss: 1.547,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 8 (0m 24s) 	Training Loss: 1.521, 	Test Loss: 1.551,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 9 (0m 24s) 	Training Loss: 1.517, 	Test Loss: 1.546,  	Training acc: 0.94, 	Test acc: 0.92, 
+Epoch: 10 (0m 24s) 	Training Loss: 1.514, 	Test Loss: 1.548,  	Training acc: 0.95, 	Test acc: 0.91, 
+Epoch: 11 (0m 24s) 	Training Loss: 1.510, 	Test Loss: 1.541,  	Training acc: 0.95, 	Test acc: 0.92, 
+[32m[I 2023-04-23 22:57:18,815][0m Trial 1 finished with value: 0.922 and parameters: {'conv_layer': 3, 'lr': 1.9208518216244754e-05, 'num_epochs': 11}. Best is trial 1 with value: 0.922.[0m
+Training completed in 4m 36s 	Training Loss: 1.510, 	Test Loss: 1.541,  	Training acc: 0.95, 	Test acc: 0.92, 
+
+Model Evaluation Summary:
+Accuracy: 92.200%
+F1 Score: 92.140%
+
+Classwise Accuracy Score: 
+|   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+|         0.907 |     0.977 |      0.861 |    0.92 |   0.93 |    0.979 |   0.713 |     0.978 | 0.983 |        0.972 |
+
+Confusion Matrix:
+| True Label   |   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|:-------------|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+| T-shirt/top  |           907 |         0 |         17 |      12 |      2 |        1 |      57 |         0 |     4 |            0 |
+| Trouser      |             0 |       977 |          1 |      15 |      4 |        0 |       2 |         0 |     1 |            0 |
+| Pullover     |            17 |         1 |        861 |       9 |     61 |        0 |      50 |         0 |     1 |            0 |
+| Dress        |            11 |         1 |         11 |     920 |     36 |        0 |      20 |         0 |     1 |            0 |
+| Coat         |             1 |         0 |         13 |      18 |    930 |        0 |      38 |         0 |     0 |            0 |
+| Sandal       |             0 |         0 |          0 |       1 |      0 |      979 |       0 |        14 |     0 |            6 |
+| Shirt        |           125 |         0 |         43 |      30 |     82 |        0 |     713 |         0 |     7 |            0 |
+| Sneaker      |             0 |         0 |          0 |       0 |      0 |        5 |       0 |       978 |     0 |           17 |
+| Bag          |             2 |         2 |          1 |       4 |      2 |        1 |       3 |         2 |   983 |            0 |
+| Ankle boot   |             0 |         0 |          0 |       0 |      0 |        3 |       0 |        24 |     1 |          972 |
+Model ====> cnn_model_conv_3_lr_0.000201_epochs_5
+Epoch: 1 (0m 24s) 	Training Loss: 1.696, 	Test Loss: 1.693,  	Training acc: 0.77, 	Test acc: 0.77, 
+Epoch: 2 (0m 24s) 	Training Loss: 1.669, 	Test Loss: 1.675,  	Training acc: 0.79, 	Test acc: 0.79, 
+Epoch: 3 (0m 24s) 	Training Loss: 1.662, 	Test Loss: 1.677,  	Training acc: 0.80, 	Test acc: 0.78, 
+Epoch: 4 (0m 24s) 	Training Loss: 1.670, 	Test Loss: 1.653,  	Training acc: 0.79, 	Test acc: 0.81, 
+Epoch: 5 (0m 24s) 	Training Loss: 1.659, 	Test Loss: 1.661,  	Training acc: 0.80, 	Test acc: 0.80, 
+[32m[I 2023-04-23 22:59:26,014][0m Trial 2 finished with value: 0.7982 and parameters: {'conv_layer': 3, 'lr': 0.0002014163737948523, 'num_epochs': 5}. Best is trial 1 with value: 0.922.[0m
+Training completed in 2m 3s 	Training Loss: 1.659, 	Test Loss: 1.661,  	Training acc: 0.80, 	Test acc: 0.80, 
+
+Model Evaluation Summary:
+Accuracy: 79.820%
+F1 Score: 76.382%
+
+Classwise Accuracy Score: 
+|   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+|         0.816 |     0.949 |      0.911 |   0.902 |  0.622 |    0.927 |       0 |     0.945 | 0.956 |        0.954 |
+
+Confusion Matrix:
+| True Label   |   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|:-------------|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+| T-shirt/top  |           816 |         1 |         54 |     105 |      6 |        2 |       0 |         0 |    16 |            0 |
+| Trouser      |             0 |       949 |          4 |      38 |      7 |        0 |       0 |         0 |     2 |            0 |
+| Pullover     |            20 |         0 |        911 |      10 |     55 |        0 |       0 |         0 |     4 |            0 |
+| Dress        |             7 |         3 |         64 |     902 |     21 |        0 |       0 |         0 |     3 |            0 |
+| Coat         |             0 |         0 |        332 |      42 |    622 |        0 |       0 |         0 |     4 |            0 |
+| Sandal       |             0 |         0 |          6 |       0 |      0 |      927 |       0 |        54 |     0 |           13 |
+| Shirt        |           241 |         0 |        407 |     108 |    210 |        0 |       0 |         0 |    34 |            0 |
+| Sneaker      |             0 |         0 |          1 |       0 |      0 |        7 |       0 |       945 |     1 |           46 |
+| Bag          |             0 |         0 |         17 |      13 |      5 |        4 |       0 |         5 |   956 |            0 |
+| Ankle boot   |             0 |         0 |          2 |       0 |      1 |        3 |       0 |        39 |     1 |          954 |
+Model ====> cnn_model_conv_6_lr_0.00319_epochs_17
+Epoch: 1 (0m 21s) 	Training Loss: 2.294, 	Test Loss: 2.289,  	Training acc: 0.17, 	Test acc: 0.17, 
+Epoch: 2 (0m 21s) 	Training Loss: 2.359, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+Epoch: 3 (0m 21s) 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+Epoch: 4 (0m 21s) 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+Epoch: 5 (0m 21s) 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+Epoch: 6 (0m 21s) 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+Epoch: 7 (0m 21s) 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+Epoch: 8 (0m 21s) 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+Epoch: 9 (0m 21s) 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+Epoch: 10 (0m 21s) 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+Epoch: 11 (0m 21s) 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+Epoch: 12 (0m 21s) 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+Epoch: 13 (0m 21s) 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+Epoch: 14 (0m 21s) 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+Epoch: 15 (0m 21s) 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+Epoch: 16 (0m 21s) 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+Epoch: 17 (0m 21s) 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+[32m[I 2023-04-23 23:05:38,061][0m Trial 3 finished with value: 0.1 and parameters: {'conv_layer': 6, 'lr': 0.003191395906656332, 'num_epochs': 17}. Best is trial 1 with value: 0.922.[0m
+Training completed in 6m 8s 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+
+Model Evaluation Summary:
+Accuracy: 10.000%
+F1 Score: 1.818%
+
+Classwise Accuracy Score: 
+|   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+|             0 |         0 |          0 |       0 |      0 |        1 |       0 |         0 |     0 |            0 |
+
+Confusion Matrix:
+| True Label   |   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|:-------------|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+| T-shirt/top  |             0 |         0 |          0 |       0 |      0 |     1000 |       0 |         0 |     0 |            0 |
+| Trouser      |             0 |         0 |          0 |       0 |      0 |     1000 |       0 |         0 |     0 |            0 |
+| Pullover     |             0 |         0 |          0 |       0 |      0 |     1000 |       0 |         0 |     0 |            0 |
+| Dress        |             0 |         0 |          0 |       0 |      0 |     1000 |       0 |         0 |     0 |            0 |
+| Coat         |             0 |         0 |          0 |       0 |      0 |     1000 |       0 |         0 |     0 |            0 |
+| Sandal       |             0 |         0 |          0 |       0 |      0 |     1000 |       0 |         0 |     0 |            0 |
+| Shirt        |             0 |         0 |          0 |       0 |      0 |     1000 |       0 |         0 |     0 |            0 |
+| Sneaker      |             0 |         0 |          0 |       0 |      0 |     1000 |       0 |         0 |     0 |            0 |
+| Bag          |             0 |         0 |          0 |       0 |      0 |     1000 |       0 |         0 |     0 |            0 |
+| Ankle boot   |             0 |         0 |          0 |       0 |      0 |     1000 |       0 |         0 |     0 |            0 |
+Model ====> cnn_model_conv_5_lr_0.000525_epochs_14
+Epoch: 1 (0m 20s) 	Training Loss: 1.719, 	Test Loss: 1.688,  	Training acc: 0.74, 	Test acc: 0.77, 
+Epoch: 2 (0m 20s) 	Training Loss: 1.674, 	Test Loss: 1.650,  	Training acc: 0.79, 	Test acc: 0.81, 
+Epoch: 3 (0m 20s) 	Training Loss: 1.658, 	Test Loss: 1.660,  	Training acc: 0.80, 	Test acc: 0.80, 
+Epoch: 4 (0m 20s) 	Training Loss: 1.651, 	Test Loss: 1.663,  	Training acc: 0.81, 	Test acc: 0.80, 
+Epoch: 5 (0m 20s) 	Training Loss: 1.651, 	Test Loss: 1.639,  	Training acc: 0.81, 	Test acc: 0.82, 
+Epoch: 6 (0m 20s) 	Training Loss: 1.642, 	Test Loss: 1.649,  	Training acc: 0.82, 	Test acc: 0.81, 
+Epoch: 7 (0m 20s) 	Training Loss: 1.643, 	Test Loss: 1.660,  	Training acc: 0.82, 	Test acc: 0.80, 
+Epoch: 8 (0m 20s) 	Training Loss: 1.661, 	Test Loss: 1.725,  	Training acc: 0.80, 	Test acc: 0.74, 
+Epoch: 9 (0m 20s) 	Training Loss: 1.649, 	Test Loss: 1.694,  	Training acc: 0.81, 	Test acc: 0.77, 
+Epoch: 10 (0m 20s) 	Training Loss: 1.659, 	Test Loss: 1.643,  	Training acc: 0.80, 	Test acc: 0.82, 
+Epoch: 11 (0m 20s) 	Training Loss: 1.654, 	Test Loss: 1.654,  	Training acc: 0.81, 	Test acc: 0.81, 
+Epoch: 12 (0m 20s) 	Training Loss: 1.653, 	Test Loss: 1.651,  	Training acc: 0.81, 	Test acc: 0.81, 
+Epoch: 13 (0m 20s) 	Training Loss: 1.663, 	Test Loss: 1.679,  	Training acc: 0.80, 	Test acc: 0.78, 
+Epoch: 14 (0m 20s) 	Training Loss: 1.656, 	Test Loss: 1.664,  	Training acc: 0.80, 	Test acc: 0.80, 
+[32m[I 2023-04-23 23:10:23,874][0m Trial 4 finished with value: 0.7999 and parameters: {'conv_layer': 5, 'lr': 0.0005245355311795719, 'num_epochs': 14}. Best is trial 1 with value: 0.922.[0m
+Training completed in 4m 42s 	Training Loss: 1.656, 	Test Loss: 1.664,  	Training acc: 0.80, 	Test acc: 0.80, 
+
+Model Evaluation Summary:
+Accuracy: 79.990%
+F1 Score: 80.171%
+
+Classwise Accuracy Score: 
+|   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+|         0.882 |     0.978 |      0.561 |   0.687 |  0.574 |    0.937 |   0.538 |     0.927 | 0.948 |        0.967 |
+
+Confusion Matrix:
+| True Label   |   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|:-------------|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+| T-shirt/top  |           882 |         8 |         10 |      15 |      1 |        6 |      72 |         0 |     6 |            0 |
+| Trouser      |             3 |       978 |          1 |       7 |      9 |        0 |       0 |         0 |     2 |            0 |
+| Pullover     |            13 |         2 |        561 |       1 |    164 |        0 |     256 |         0 |     3 |            0 |
+| Dress        |            71 |        88 |          3 |     687 |     48 |        1 |      89 |         0 |     4 |            9 |
+| Coat         |             7 |         3 |         44 |      11 |    574 |        1 |     355 |         0 |     3 |            2 |
+| Sandal       |             0 |         0 |          0 |       0 |      0 |      937 |       0 |        29 |     0 |           34 |
+| Shirt        |           304 |         8 |         80 |       9 |     48 |        0 |     538 |         0 |    13 |            0 |
+| Sneaker      |             0 |         0 |          0 |       0 |      0 |       21 |       0 |       927 |     0 |           52 |
+| Bag          |             1 |         4 |          0 |       3 |      4 |        8 |      24 |         6 |   948 |            2 |
+| Ankle boot   |             0 |         0 |          1 |       0 |      0 |        4 |       0 |        28 |     0 |          967 |
+Model ====> cnn_model_conv_3_lr_0.000127_epochs_14
+Epoch: 1 (0m 24s) 	Training Loss: 1.691, 	Test Loss: 1.665,  	Training acc: 0.77, 	Test acc: 0.79, 
+Epoch: 2 (0m 24s) 	Training Loss: 1.657, 	Test Loss: 1.657,  	Training acc: 0.80, 	Test acc: 0.80, 
+[32m[I 2023-04-23 23:11:13,704][0m Trial 5 pruned. [0m
+Model ====> cnn_model_conv_6_lr_0.0275_epochs_18
+Epoch: 1 (0m 21s) 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+[32m[I 2023-04-23 23:11:35,409][0m Trial 6 pruned. [0m
+Model ====> cnn_model_conv_4_lr_0.000144_epochs_20
+Epoch: 1 (0m 19s) 	Training Loss: 1.627, 	Test Loss: 1.607,  	Training acc: 0.84, 	Test acc: 0.85, 
+Epoch: 2 (0m 19s) 	Training Loss: 1.587, 	Test Loss: 1.589,  	Training acc: 0.87, 	Test acc: 0.87, 
+Epoch: 3 (0m 19s) 	Training Loss: 1.575, 	Test Loss: 1.585,  	Training acc: 0.89, 	Test acc: 0.88, 
+Epoch: 4 (0m 19s) 	Training Loss: 1.571, 	Test Loss: 1.582,  	Training acc: 0.89, 	Test acc: 0.88, 
+Epoch: 5 (0m 19s) 	Training Loss: 1.565, 	Test Loss: 1.577,  	Training acc: 0.90, 	Test acc: 0.88, 
+Epoch: 6 (0m 19s) 	Training Loss: 1.565, 	Test Loss: 1.570,  	Training acc: 0.90, 	Test acc: 0.89, 
+Epoch: 7 (0m 19s) 	Training Loss: 1.561, 	Test Loss: 1.562,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 8 (0m 19s) 	Training Loss: 1.560, 	Test Loss: 1.563,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 9 (0m 19s) 	Training Loss: 1.555, 	Test Loss: 1.565,  	Training acc: 0.91, 	Test acc: 0.90, 
+Epoch: 10 (0m 19s) 	Training Loss: 1.555, 	Test Loss: 1.568,  	Training acc: 0.91, 	Test acc: 0.89, 
+Epoch: 11 (0m 19s) 	Training Loss: 1.559, 	Test Loss: 1.567,  	Training acc: 0.90, 	Test acc: 0.89, 
+Epoch: 12 (0m 19s) 	Training Loss: 1.552, 	Test Loss: 1.566,  	Training acc: 0.91, 	Test acc: 0.89, 
+Epoch: 13 (0m 19s) 	Training Loss: 1.555, 	Test Loss: 1.561,  	Training acc: 0.91, 	Test acc: 0.90, 
+Epoch: 14 (0m 19s) 	Training Loss: 1.553, 	Test Loss: 1.593,  	Training acc: 0.91, 	Test acc: 0.87, 
+Epoch: 15 (0m 19s) 	Training Loss: 1.558, 	Test Loss: 1.576,  	Training acc: 0.90, 	Test acc: 0.89, 
+Epoch: 16 (0m 19s) 	Training Loss: 1.554, 	Test Loss: 1.579,  	Training acc: 0.91, 	Test acc: 0.88, 
+Epoch: 17 (0m 19s) 	Training Loss: 1.555, 	Test Loss: 1.559,  	Training acc: 0.91, 	Test acc: 0.90, 
+Epoch: 18 (0m 19s) 	Training Loss: 1.549, 	Test Loss: 1.560,  	Training acc: 0.91, 	Test acc: 0.90, 
+Epoch: 19 (0m 19s) 	Training Loss: 1.549, 	Test Loss: 1.596,  	Training acc: 0.91, 	Test acc: 0.87, 
+Epoch: 20 (0m 19s) 	Training Loss: 1.554, 	Test Loss: 1.569,  	Training acc: 0.91, 	Test acc: 0.89, 
+[32m[I 2023-04-23 23:18:14,481][0m Trial 7 finished with value: 0.8931 and parameters: {'conv_layer': 4, 'lr': 0.00014427869416478592, 'num_epochs': 20}. Best is trial 1 with value: 0.922.[0m
+Training completed in 6m 35s 	Training Loss: 1.554, 	Test Loss: 1.569,  	Training acc: 0.91, 	Test acc: 0.89, 
+
+Model Evaluation Summary:
+Accuracy: 89.310%
+F1 Score: 89.394%
+
+Classwise Accuracy Score: 
+|   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+|         0.835 |     0.979 |      0.869 |   0.883 |  0.752 |    0.957 |   0.744 |     0.972 | 0.981 |        0.959 |
+
+Confusion Matrix:
+| True Label   |   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|:-------------|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+| T-shirt/top  |           835 |         0 |         18 |      10 |      1 |        1 |     125 |         0 |    10 |            0 |
+| Trouser      |             3 |       979 |          0 |      12 |      2 |        0 |       1 |         0 |     3 |            0 |
+| Pullover     |             7 |         1 |        869 |       9 |     25 |        1 |      86 |         0 |     2 |            0 |
+| Dress        |            21 |         3 |         10 |     883 |     35 |        0 |      42 |         0 |     4 |            2 |
+| Coat         |             0 |         0 |        106 |      14 |    752 |        0 |     125 |         0 |     2 |            1 |
+| Sandal       |             2 |         0 |          0 |       0 |      0 |      957 |       0 |        38 |     1 |            2 |
+| Shirt        |           115 |         1 |         60 |      18 |     48 |        1 |     744 |         0 |    13 |            0 |
+| Sneaker      |             0 |         0 |          0 |       0 |      0 |        5 |       0 |       972 |     0 |           23 |
+| Bag          |             2 |         1 |          0 |       4 |      1 |        1 |       6 |         4 |   981 |            0 |
+| Ankle boot   |             0 |         0 |          0 |       0 |      0 |        6 |       0 |        34 |     1 |          959 |
+Model ====> cnn_model_conv_3_lr_0.00333_epochs_6
+Epoch: 1 (0m 24s) 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+[32m[I 2023-04-23 23:18:39,696][0m Trial 8 pruned. [0m
+Model ====> cnn_model_conv_3_lr_0.0275_epochs_13
+Epoch: 1 (0m 24s) 	Training Loss: 2.361, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+[32m[I 2023-04-23 23:19:04,847][0m Trial 9 pruned. [0m
+Model ====> cnn_model_conv_4_lr_1.98e-05_epochs_9
+Epoch: 1 (0m 19s) 	Training Loss: 1.633, 	Test Loss: 1.586,  	Training acc: 0.85, 	Test acc: 0.88, 
+Epoch: 2 (0m 20s) 	Training Loss: 1.563, 	Test Loss: 1.567,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 20s) 	Training Loss: 1.547, 	Test Loss: 1.567,  	Training acc: 0.92, 	Test acc: 0.90, 
+Epoch: 4 (0m 21s) 	Training Loss: 1.538, 	Test Loss: 1.555,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 5 (0m 21s) 	Training Loss: 1.531, 	Test Loss: 1.554,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 6 (0m 20s) 	Training Loss: 1.525, 	Test Loss: 1.549,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 7 (0m 19s) 	Training Loss: 1.521, 	Test Loss: 1.552,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 8 (0m 19s) 	Training Loss: 1.517, 	Test Loss: 1.553,  	Training acc: 0.95, 	Test acc: 0.91, 
+Epoch: 9 (0m 20s) 	Training Loss: 1.513, 	Test Loss: 1.547,  	Training acc: 0.95, 	Test acc: 0.91, 
+[32m[I 2023-04-23 23:22:11,563][0m Trial 10 finished with value: 0.916 and parameters: {'conv_layer': 4, 'lr': 1.9785973987391547e-05, 'num_epochs': 9}. Best is trial 1 with value: 0.922.[0m
+Training completed in 3m 3s 	Training Loss: 1.513, 	Test Loss: 1.547,  	Training acc: 0.95, 	Test acc: 0.91, 
+
+Model Evaluation Summary:
+Accuracy: 91.600%
+F1 Score: 91.507%
+
+Classwise Accuracy Score: 
+|   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+|         0.922 |      0.98 |      0.836 |   0.921 |  0.901 |    0.988 |   0.691 |     0.961 | 0.988 |        0.972 |
+
+Confusion Matrix:
+| True Label   |   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|:-------------|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+| T-shirt/top  |           922 |         2 |         12 |       8 |      3 |        0 |      48 |         0 |     5 |            0 |
+| Trouser      |             2 |       980 |          1 |      11 |      2 |        0 |       2 |         0 |     2 |            0 |
+| Pullover     |            23 |         3 |        836 |      10 |     65 |        0 |      62 |         0 |     1 |            0 |
+| Dress        |            22 |         2 |         11 |     921 |     20 |        0 |      20 |         0 |     3 |            1 |
+| Coat         |             2 |         2 |         26 |      29 |    901 |        0 |      40 |         0 |     0 |            0 |
+| Sandal       |             0 |         0 |          0 |       0 |      0 |      988 |       0 |         6 |     1 |            5 |
+| Shirt        |           151 |         3 |         42 |      30 |     74 |        0 |     691 |         0 |     9 |            0 |
+| Sneaker      |             0 |         0 |          0 |       0 |      0 |       13 |       0 |       961 |     0 |           26 |
+| Bag          |             2 |         2 |          0 |       2 |      3 |        1 |       2 |         0 |   988 |            0 |
+| Ankle boot   |             0 |         0 |          0 |       0 |      0 |        3 |       0 |        24 |     1 |          972 |
+Model ====> cnn_model_conv_4_lr_1.88e-05_epochs_10
+Epoch: 1 (0m 19s) 	Training Loss: 1.631, 	Test Loss: 1.581,  	Training acc: 0.85, 	Test acc: 0.89, 
+Epoch: 2 (0m 20s) 	Training Loss: 1.564, 	Test Loss: 1.565,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 21s) 	Training Loss: 1.550, 	Test Loss: 1.560,  	Training acc: 0.91, 	Test acc: 0.90, 
+Epoch: 4 (0m 20s) 	Training Loss: 1.540, 	Test Loss: 1.555,  	Training acc: 0.92, 	Test acc: 0.91, 
+Epoch: 5 (0m 20s) 	Training Loss: 1.533, 	Test Loss: 1.550,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 6 (0m 20s) 	Training Loss: 1.528, 	Test Loss: 1.552,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 7 (0m 20s) 	Training Loss: 1.524, 	Test Loss: 1.548,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 8 (0m 19s) 	Training Loss: 1.519, 	Test Loss: 1.549,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 9 (0m 20s) 	Training Loss: 1.516, 	Test Loss: 1.554,  	Training acc: 0.95, 	Test acc: 0.91, 
+Epoch: 10 (0m 20s) 	Training Loss: 1.512, 	Test Loss: 1.547,  	Training acc: 0.95, 	Test acc: 0.91, 
+[32m[I 2023-04-23 23:25:39,197][0m Trial 11 finished with value: 0.9157 and parameters: {'conv_layer': 4, 'lr': 1.883159900790896e-05, 'num_epochs': 10}. Best is trial 1 with value: 0.922.[0m
+Training completed in 3m 24s 	Training Loss: 1.512, 	Test Loss: 1.547,  	Training acc: 0.95, 	Test acc: 0.91, 
+
+Model Evaluation Summary:
+Accuracy: 91.570%
+F1 Score: 91.458%
+
+Classwise Accuracy Score: 
+|   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+|         0.904 |     0.978 |      0.909 |   0.933 |  0.861 |     0.96 |    0.68 |     0.978 | 0.983 |        0.971 |
+
+Confusion Matrix:
+| True Label   |   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|:-------------|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+| T-shirt/top  |           904 |         0 |         15 |      14 |      2 |        1 |      55 |         0 |     9 |            0 |
+| Trouser      |             0 |       978 |          2 |      14 |      3 |        0 |       1 |         0 |     1 |            1 |
+| Pullover     |            18 |         1 |        909 |      10 |     32 |        0 |      29 |         0 |     1 |            0 |
+| Dress        |            11 |         2 |         15 |     933 |     17 |        0 |      19 |         0 |     1 |            2 |
+| Coat         |             2 |         0 |         73 |      25 |    861 |        0 |      39 |         0 |     0 |            0 |
+| Sandal       |             0 |         0 |          0 |       0 |      0 |      960 |       0 |        27 |     1 |           12 |
+| Shirt        |           123 |         1 |         78 |      36 |     74 |        0 |     680 |         0 |     8 |            0 |
+| Sneaker      |             0 |         0 |          0 |       0 |      0 |        2 |       0 |       978 |     0 |           20 |
+| Bag          |             3 |         1 |          2 |       3 |      0 |        1 |       3 |         4 |   983 |            0 |
+| Ankle boot   |             0 |         0 |          0 |       0 |      0 |        2 |       0 |        26 |     1 |          971 |
+Model ====> cnn_model_conv_5_lr_1.01e-05_epochs_11
+Epoch: 1 (0m 21s) 	Training Loss: 1.726, 	Test Loss: 1.641,  	Training acc: 0.77, 	Test acc: 0.83, 
+[32m[I 2023-04-23 23:26:01,119][0m Trial 12 pruned. [0m
+Model ====> cnn_model_conv_3_lr_3.98e-05_epochs_16
+Epoch: 1 (0m 25s) 	Training Loss: 1.670, 	Test Loss: 1.662,  	Training acc: 0.79, 	Test acc: 0.80, 
+[32m[I 2023-04-23 23:26:27,227][0m Trial 13 pruned. [0m
+Model ====> cnn_model_conv_4_lr_5.15e-05_epochs_8
+Epoch: 1 (0m 21s) 	Training Loss: 1.623, 	Test Loss: 1.582,  	Training acc: 0.84, 	Test acc: 0.88, 
+Epoch: 2 (0m 20s) 	Training Loss: 1.566, 	Test Loss: 1.573,  	Training acc: 0.90, 	Test acc: 0.89, 
+Epoch: 3 (0m 20s) 	Training Loss: 1.553, 	Test Loss: 1.562,  	Training acc: 0.91, 	Test acc: 0.90, 
+Epoch: 4 (0m 20s) 	Training Loss: 1.545, 	Test Loss: 1.564,  	Training acc: 0.92, 	Test acc: 0.90, 
+Epoch: 5 (0m 20s) 	Training Loss: 1.543, 	Test Loss: 1.553,  	Training acc: 0.92, 	Test acc: 0.91, 
+Epoch: 6 (0m 20s) 	Training Loss: 1.538, 	Test Loss: 1.552,  	Training acc: 0.92, 	Test acc: 0.91, 
+[32m[I 2023-04-23 23:28:32,119][0m Trial 14 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.01e-05_epochs_12
+Epoch: 1 (0m 24s) 	Training Loss: 1.625, 	Test Loss: 1.584,  	Training acc: 0.85, 	Test acc: 0.88, 
+Epoch: 2 (0m 25s) 	Training Loss: 1.565, 	Test Loss: 1.567,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 24s) 	Training Loss: 1.550, 	Test Loss: 1.570,  	Training acc: 0.91, 	Test acc: 0.89, 
+Epoch: 4 (0m 25s) 	Training Loss: 1.539, 	Test Loss: 1.559,  	Training acc: 0.93, 	Test acc: 0.90, 
+Epoch: 5 (0m 25s) 	Training Loss: 1.531, 	Test Loss: 1.555,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 6 (0m 25s) 	Training Loss: 1.525, 	Test Loss: 1.550,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 7 (0m 25s) 	Training Loss: 1.519, 	Test Loss: 1.554,  	Training acc: 0.95, 	Test acc: 0.91, 
+Epoch: 8 (0m 25s) 	Training Loss: 1.514, 	Test Loss: 1.544,  	Training acc: 0.95, 	Test acc: 0.92, 
+Epoch: 9 (0m 25s) 	Training Loss: 1.510, 	Test Loss: 1.546,  	Training acc: 0.95, 	Test acc: 0.92, 
+Epoch: 10 (0m 25s) 	Training Loss: 1.506, 	Test Loss: 1.541,  	Training acc: 0.96, 	Test acc: 0.92, 
+Epoch: 11 (0m 24s) 	Training Loss: 1.503, 	Test Loss: 1.543,  	Training acc: 0.96, 	Test acc: 0.92, 
+Epoch: 12 (0m 24s) 	Training Loss: 1.500, 	Test Loss: 1.546,  	Training acc: 0.96, 	Test acc: 0.92, 
+[32m[I 2023-04-23 23:33:38,528][0m Trial 15 finished with value: 0.9177 and parameters: {'conv_layer': 3, 'lr': 1.0142166981783995e-05, 'num_epochs': 12}. Best is trial 1 with value: 0.922.[0m
+Training completed in 5m 2s 	Training Loss: 1.500, 	Test Loss: 1.546,  	Training acc: 0.96, 	Test acc: 0.92, 
+
+Model Evaluation Summary:
+Accuracy: 91.770%
+F1 Score: 91.692%
+
+Classwise Accuracy Score: 
+|   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+|         0.902 |     0.984 |      0.886 |   0.899 |  0.918 |    0.994 |   0.701 |     0.927 | 0.984 |        0.982 |
+
+Confusion Matrix:
+| True Label   |   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|:-------------|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+| T-shirt/top  |           902 |         0 |         18 |       7 |      3 |        1 |      62 |         0 |     7 |            0 |
+| Trouser      |             0 |       984 |          2 |       6 |      5 |        0 |       2 |         0 |     1 |            0 |
+| Pullover     |            21 |         1 |        886 |       5 |     52 |        1 |      34 |         0 |     0 |            0 |
+| Dress        |            27 |         6 |         14 |     899 |     29 |        0 |      24 |         0 |     1 |            0 |
+| Coat         |             3 |         0 |         36 |      19 |    918 |        0 |      23 |         0 |     0 |            1 |
+| Sandal       |             0 |         0 |          0 |       0 |      0 |      994 |       0 |         3 |     0 |            3 |
+| Shirt        |           118 |         2 |         54 |      18 |    103 |        0 |     701 |         0 |     4 |            0 |
+| Sneaker      |             0 |         0 |          0 |       0 |      0 |       18 |       0 |       927 |     0 |           55 |
+| Bag          |             3 |         2 |          2 |       2 |      1 |        3 |       2 |         1 |   984 |            0 |
+| Ankle boot   |             0 |         0 |          0 |       0 |      0 |        5 |       0 |        12 |     1 |          982 |
+Model ====> cnn_model_conv_5_lr_3.68e-05_epochs_15
+Epoch: 1 (0m 20s) 	Training Loss: 1.650, 	Test Loss: 1.590,  	Training acc: 0.82, 	Test acc: 0.87, 
+Epoch: 2 (0m 20s) 	Training Loss: 1.568, 	Test Loss: 1.573,  	Training acc: 0.90, 	Test acc: 0.89, 
+Epoch: 3 (0m 20s) 	Training Loss: 1.555, 	Test Loss: 1.567,  	Training acc: 0.91, 	Test acc: 0.90, 
+Epoch: 4 (0m 20s) 	Training Loss: 1.547, 	Test Loss: 1.566,  	Training acc: 0.92, 	Test acc: 0.89, 
+Epoch: 5 (0m 20s) 	Training Loss: 1.542, 	Test Loss: 1.559,  	Training acc: 0.92, 	Test acc: 0.90, 
+[32m[I 2023-04-23 23:35:19,729][0m Trial 16 pruned. [0m
+Model ====> cnn_model_conv_4_lr_7.52e-05_epochs_19
+Epoch: 1 (0m 19s) 	Training Loss: 1.615, 	Test Loss: 1.578,  	Training acc: 0.85, 	Test acc: 0.88, 
+Epoch: 2 (0m 19s) 	Training Loss: 1.570, 	Test Loss: 1.567,  	Training acc: 0.89, 	Test acc: 0.89, 
+Epoch: 3 (0m 19s) 	Training Loss: 1.560, 	Test Loss: 1.561,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 4 (0m 19s) 	Training Loss: 1.553, 	Test Loss: 1.561,  	Training acc: 0.91, 	Test acc: 0.90, 
+Epoch: 5 (0m 19s) 	Training Loss: 1.548, 	Test Loss: 1.567,  	Training acc: 0.91, 	Test acc: 0.89, 
+[32m[I 2023-04-23 23:36:58,647][0m Trial 17 pruned. [0m
+Model ====> cnn_model_conv_3_lr_0.00026_epochs_7
+Epoch: 1 (0m 24s) 	Training Loss: 2.083, 	Test Loss: 2.084,  	Training acc: 0.38, 	Test acc: 0.38, 
+[32m[I 2023-04-23 23:37:23,768][0m Trial 18 pruned. [0m
+Model ====> cnn_model_conv_4_lr_2.65e-05_epochs_12
+Epoch: 1 (0m 19s) 	Training Loss: 1.636, 	Test Loss: 1.582,  	Training acc: 0.84, 	Test acc: 0.88, 
+Epoch: 2 (0m 19s) 	Training Loss: 1.563, 	Test Loss: 1.567,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 19s) 	Training Loss: 1.549, 	Test Loss: 1.557,  	Training acc: 0.91, 	Test acc: 0.91, 
+Epoch: 4 (0m 19s) 	Training Loss: 1.540, 	Test Loss: 1.551,  	Training acc: 0.92, 	Test acc: 0.91, 
+Epoch: 5 (0m 19s) 	Training Loss: 1.533, 	Test Loss: 1.553,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 6 (0m 19s) 	Training Loss: 1.528, 	Test Loss: 1.546,  	Training acc: 0.93, 	Test acc: 0.92, 
+Epoch: 7 (0m 19s) 	Training Loss: 1.524, 	Test Loss: 1.545,  	Training acc: 0.94, 	Test acc: 0.92, 
+Epoch: 8 (0m 19s) 	Training Loss: 1.520, 	Test Loss: 1.546,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 9 (0m 19s) 	Training Loss: 1.516, 	Test Loss: 1.545,  	Training acc: 0.95, 	Test acc: 0.92, 
+Epoch: 10 (0m 19s) 	Training Loss: 1.514, 	Test Loss: 1.546,  	Training acc: 0.95, 	Test acc: 0.91, 
+Epoch: 11 (0m 19s) 	Training Loss: 1.510, 	Test Loss: 1.545,  	Training acc: 0.95, 	Test acc: 0.92, 
+Epoch: 12 (0m 19s) 	Training Loss: 1.508, 	Test Loss: 1.552,  	Training acc: 0.95, 	Test acc: 0.91, 
+[32m[I 2023-04-23 23:41:24,102][0m Trial 19 finished with value: 0.9124 and parameters: {'conv_layer': 4, 'lr': 2.645189857032824e-05, 'num_epochs': 12}. Best is trial 1 with value: 0.922.[0m
+Training completed in 3m 56s 	Training Loss: 1.508, 	Test Loss: 1.552,  	Training acc: 0.95, 	Test acc: 0.91, 
+
+Model Evaluation Summary:
+Accuracy: 91.240%
+F1 Score: 91.372%
+
+Classwise Accuracy Score: 
+|   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+|          0.86 |     0.977 |       0.83 |   0.919 |  0.825 |    0.967 |   0.828 |     0.991 | 0.981 |        0.946 |
+
+Confusion Matrix:
+| True Label   |   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|:-------------|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+| T-shirt/top  |           860 |         0 |          8 |       8 |      2 |        0 |     118 |         1 |     3 |            0 |
+| Trouser      |             1 |       977 |          0 |      11 |      7 |        0 |       4 |         0 |     0 |            0 |
+| Pullover     |            18 |         1 |        830 |       6 |     40 |        0 |     104 |         0 |     1 |            0 |
+| Dress        |            13 |         1 |          9 |     919 |     28 |        0 |      29 |         0 |     1 |            0 |
+| Coat         |             0 |         0 |         41 |      22 |    825 |        0 |     112 |         0 |     0 |            0 |
+| Sandal       |             0 |         0 |          0 |       0 |      0 |      967 |       0 |        27 |     1 |            5 |
+| Shirt        |            78 |         0 |         25 |      25 |     40 |        0 |     828 |         0 |     4 |            0 |
+| Sneaker      |             0 |         0 |          0 |       0 |      0 |        2 |       0 |       991 |     0 |            7 |
+| Bag          |             2 |         2 |          0 |       5 |      1 |        1 |       5 |         3 |   981 |            0 |
+| Ankle boot   |             0 |         0 |          0 |       0 |      0 |        5 |       1 |        48 |     0 |          946 |
+Model ====> cnn_model_conv_3_lr_7.15e-05_epochs_10
+Epoch: 1 (0m 24s) 	Training Loss: 1.680, 	Test Loss: 1.666,  	Training acc: 0.78, 	Test acc: 0.79, 
+[32m[I 2023-04-23 23:41:49,275][0m Trial 20 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.52e-05_epochs_12
+Epoch: 1 (0m 24s) 	Training Loss: 1.626, 	Test Loss: 1.581,  	Training acc: 0.84, 	Test acc: 0.88, 
+Epoch: 2 (0m 24s) 	Training Loss: 1.564, 	Test Loss: 1.571,  	Training acc: 0.90, 	Test acc: 0.89, 
+Epoch: 3 (0m 24s) 	Training Loss: 1.550, 	Test Loss: 1.566,  	Training acc: 0.91, 	Test acc: 0.90, 
+Epoch: 4 (0m 24s) 	Training Loss: 1.539, 	Test Loss: 1.555,  	Training acc: 0.92, 	Test acc: 0.91, 
+Epoch: 5 (0m 24s) 	Training Loss: 1.532, 	Test Loss: 1.550,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 6 (0m 24s) 	Training Loss: 1.525, 	Test Loss: 1.549,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 7 (0m 24s) 	Training Loss: 1.521, 	Test Loss: 1.549,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 8 (0m 24s) 	Training Loss: 1.515, 	Test Loss: 1.549,  	Training acc: 0.95, 	Test acc: 0.91, 
+Epoch: 9 (0m 24s) 	Training Loss: 1.512, 	Test Loss: 1.546,  	Training acc: 0.95, 	Test acc: 0.92, 
+Epoch: 10 (0m 24s) 	Training Loss: 1.509, 	Test Loss: 1.543,  	Training acc: 0.95, 	Test acc: 0.92, 
+Epoch: 11 (0m 24s) 	Training Loss: 1.506, 	Test Loss: 1.541,  	Training acc: 0.96, 	Test acc: 0.92, 
+Epoch: 12 (0m 24s) 	Training Loss: 1.503, 	Test Loss: 1.538,  	Training acc: 0.96, 	Test acc: 0.92, 
+m21aie225_dlops_assignment_4_q_2.py:142: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  fig = plt.figure(figsize=(20, 7))
+[32m[I 2023-04-23 23:46:49,115][0m Trial 21 finished with value: 0.9242 and parameters: {'conv_layer': 3, 'lr': 1.5200363390532468e-05, 'num_epochs': 12}. Best is trial 21 with value: 0.9242.[0m
+Training completed in 4m 56s 	Training Loss: 1.503, 	Test Loss: 1.538,  	Training acc: 0.96, 	Test acc: 0.92, 
+
+Model Evaluation Summary:
+Accuracy: 92.420%
+F1 Score: 92.395%
+
+Classwise Accuracy Score: 
+|   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+|         0.925 |     0.985 |      0.877 |   0.926 |  0.862 |    0.988 |   0.762 |     0.966 | 0.984 |        0.967 |
+
+Confusion Matrix:
+| True Label   |   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|:-------------|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+| T-shirt/top  |           925 |         1 |          9 |       7 |      2 |        1 |      49 |         0 |     6 |            0 |
+| Trouser      |             4 |       985 |          1 |       7 |      1 |        0 |       1 |         0 |     1 |            0 |
+| Pullover     |            26 |         1 |        877 |       8 |     31 |        1 |      53 |         0 |     3 |            0 |
+| Dress        |            31 |         4 |          9 |     926 |     11 |        0 |      18 |         0 |     1 |            0 |
+| Coat         |             2 |         1 |         44 |      29 |    862 |        0 |      60 |         0 |     1 |            1 |
+| Sandal       |             1 |         0 |          0 |       0 |      0 |      988 |       0 |         9 |     1 |            1 |
+| Shirt        |           124 |         1 |         40 |      25 |     41 |        0 |     762 |         0 |     7 |            0 |
+| Sneaker      |             0 |         0 |          0 |       0 |      0 |        6 |       0 |       966 |     1 |           27 |
+| Bag          |             3 |         2 |          0 |       5 |      1 |        1 |       2 |         2 |   984 |            0 |
+| Ankle boot   |             0 |         0 |          0 |       0 |      0 |       11 |       0 |        21 |     1 |          967 |
+Model ====> cnn_model_conv_3_lr_1e-05_epochs_13
+Epoch: 1 (0m 24s) 	Training Loss: 1.620, 	Test Loss: 1.583,  	Training acc: 0.86, 	Test acc: 0.88, 
+Epoch: 2 (0m 24s) 	Training Loss: 1.564, 	Test Loss: 1.565,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 24s) 	Training Loss: 1.548, 	Test Loss: 1.561,  	Training acc: 0.92, 	Test acc: 0.90, 
+Epoch: 4 (0m 24s) 	Training Loss: 1.538, 	Test Loss: 1.556,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 5 (0m 24s) 	Training Loss: 1.530, 	Test Loss: 1.556,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 6 (0m 24s) 	Training Loss: 1.524, 	Test Loss: 1.548,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 7 (0m 24s) 	Training Loss: 1.518, 	Test Loss: 1.550,  	Training acc: 0.95, 	Test acc: 0.91, 
+Epoch: 8 (0m 24s) 	Training Loss: 1.513, 	Test Loss: 1.545,  	Training acc: 0.95, 	Test acc: 0.92, 
+Epoch: 9 (0m 24s) 	Training Loss: 1.510, 	Test Loss: 1.544,  	Training acc: 0.95, 	Test acc: 0.92, 
+Epoch: 10 (0m 24s) 	Training Loss: 1.506, 	Test Loss: 1.548,  	Training acc: 0.96, 	Test acc: 0.92, 
+Epoch: 11 (0m 24s) 	Training Loss: 1.503, 	Test Loss: 1.542,  	Training acc: 0.96, 	Test acc: 0.92, 
+Epoch: 12 (0m 24s) 	Training Loss: 1.500, 	Test Loss: 1.541,  	Training acc: 0.96, 	Test acc: 0.92, 
+Epoch: 13 (0m 24s) 	Training Loss: 1.498, 	Test Loss: 1.543,  	Training acc: 0.97, 	Test acc: 0.92, 
+[32m[I 2023-04-23 23:52:13,611][0m Trial 22 finished with value: 0.9212 and parameters: {'conv_layer': 3, 'lr': 1.0034253260161109e-05, 'num_epochs': 13}. Best is trial 21 with value: 0.9242.[0m
+Training completed in 5m 20s 	Training Loss: 1.498, 	Test Loss: 1.543,  	Training acc: 0.97, 	Test acc: 0.92, 
+
+Model Evaluation Summary:
+Accuracy: 92.120%
+F1 Score: 92.048%
+
+Classwise Accuracy Score: 
+|   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+|         0.904 |     0.974 |        0.9 |   0.907 |  0.922 |    0.983 |   0.699 |     0.978 | 0.977 |        0.968 |
+
+Confusion Matrix:
+| True Label   |   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|:-------------|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+| T-shirt/top  |           904 |         0 |         25 |       6 |      4 |        1 |      55 |         0 |     5 |            0 |
+| Trouser      |             7 |       974 |          2 |      10 |      5 |        0 |       1 |         0 |     1 |            0 |
+| Pullover     |            15 |         1 |        900 |       6 |     46 |        0 |      32 |         0 |     0 |            0 |
+| Dress        |            22 |         0 |         13 |     907 |     32 |        0 |      21 |         0 |     3 |            2 |
+| Coat         |             1 |         0 |         35 |      19 |    922 |        0 |      23 |         0 |     0 |            0 |
+| Sandal       |             1 |         0 |          1 |       0 |      0 |      983 |       0 |        12 |     0 |            3 |
+| Shirt        |           124 |         1 |         51 |      22 |     98 |        0 |     699 |         0 |     5 |            0 |
+| Sneaker      |             0 |         0 |          0 |       0 |      0 |        4 |       0 |       978 |     0 |           18 |
+| Bag          |             3 |         1 |          5 |       2 |      3 |        2 |       3 |         4 |   977 |            0 |
+| Ankle boot   |             0 |         0 |          0 |       0 |      0 |        5 |       0 |        26 |     1 |          968 |
+Model ====> cnn_model_conv_3_lr_2.5e-05_epochs_12
+Epoch: 1 (0m 24s) 	Training Loss: 1.609, 	Test Loss: 1.576,  	Training acc: 0.86, 	Test acc: 0.89, 
+Epoch: 2 (0m 24s) 	Training Loss: 1.563, 	Test Loss: 1.579,  	Training acc: 0.90, 	Test acc: 0.88, 
+[32m[I 2023-04-23 23:53:03,668][0m Trial 23 pruned. [0m
+Model ====> cnn_model_conv_4_lr_6.98e-05_epochs_10
+Epoch: 1 (0m 19s) 	Training Loss: 1.611, 	Test Loss: 1.592,  	Training acc: 0.85, 	Test acc: 0.87, 
+[32m[I 2023-04-23 23:53:23,572][0m Trial 24 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.85e-05_epochs_13
+Epoch: 1 (0m 24s) 	Training Loss: 1.611, 	Test Loss: 1.585,  	Training acc: 0.86, 	Test acc: 0.88, 
+Epoch: 2 (0m 24s) 	Training Loss: 1.564, 	Test Loss: 1.575,  	Training acc: 0.90, 	Test acc: 0.89, 
+[32m[I 2023-04-23 23:54:13,383][0m Trial 25 pruned. [0m
+Model ====> cnn_model_conv_4_lr_3.88e-05_epochs_11
+Epoch: 1 (0m 19s) 	Training Loss: 1.611, 	Test Loss: 1.571,  	Training acc: 0.86, 	Test acc: 0.89, 
+Epoch: 2 (0m 19s) 	Training Loss: 1.562, 	Test Loss: 1.563,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 19s) 	Training Loss: 1.549, 	Test Loss: 1.555,  	Training acc: 0.91, 	Test acc: 0.91, 
+Epoch: 4 (0m 19s) 	Training Loss: 1.542, 	Test Loss: 1.555,  	Training acc: 0.92, 	Test acc: 0.91, 
+Epoch: 5 (0m 19s) 	Training Loss: 1.538, 	Test Loss: 1.569,  	Training acc: 0.92, 	Test acc: 0.89, 
+[32m[I 2023-04-23 23:55:52,345][0m Trial 26 pruned. [0m
+Model ====> cnn_model_conv_3_lr_0.000101_epochs_8
+Epoch: 1 (0m 24s) 	Training Loss: 1.630, 	Test Loss: 1.618,  	Training acc: 0.83, 	Test acc: 0.84, 
+[32m[I 2023-04-23 23:56:17,517][0m Trial 27 pruned. [0m
+Model ====> cnn_model_conv_5_lr_0.000352_epochs_14
+Epoch: 1 (0m 20s) 	Training Loss: 1.693, 	Test Loss: 1.695,  	Training acc: 0.77, 	Test acc: 0.76, 
+[32m[I 2023-04-23 23:56:37,815][0m Trial 28 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.21e-05_epochs_16
+Epoch: 1 (0m 24s) 	Training Loss: 1.619, 	Test Loss: 1.581,  	Training acc: 0.85, 	Test acc: 0.89, 
+Epoch: 2 (0m 24s) 	Training Loss: 1.563, 	Test Loss: 1.565,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 24s) 	Training Loss: 1.549, 	Test Loss: 1.558,  	Training acc: 0.91, 	Test acc: 0.91, 
+Epoch: 4 (0m 24s) 	Training Loss: 1.539, 	Test Loss: 1.556,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 5 (0m 24s) 	Training Loss: 1.532, 	Test Loss: 1.554,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 6 (0m 24s) 	Training Loss: 1.525, 	Test Loss: 1.554,  	Training acc: 0.94, 	Test acc: 0.91, 
+[32m[I 2023-04-23 23:59:06,190][0m Trial 29 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.51e-05_epochs_11
+Epoch: 1 (0m 24s) 	Training Loss: 1.616, 	Test Loss: 1.578,  	Training acc: 0.85, 	Test acc: 0.89, 
+Epoch: 2 (0m 24s) 	Training Loss: 1.563, 	Test Loss: 1.576,  	Training acc: 0.90, 	Test acc: 0.89, 
+[32m[I 2023-04-23 23:59:56,026][0m Trial 30 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.01e-05_epochs_15
+Epoch: 1 (0m 24s) 	Training Loss: 1.629, 	Test Loss: 1.583,  	Training acc: 0.84, 	Test acc: 0.88, 
+Epoch: 2 (0m 24s) 	Training Loss: 1.566, 	Test Loss: 1.569,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 24s) 	Training Loss: 1.551, 	Test Loss: 1.560,  	Training acc: 0.91, 	Test acc: 0.90, 
+Epoch: 4 (0m 24s) 	Training Loss: 1.540, 	Test Loss: 1.561,  	Training acc: 0.92, 	Test acc: 0.90, 
+[32m[I 2023-04-24 00:01:35,096][0m Trial 31 pruned. [0m
+Model ====> cnn_model_conv_3_lr_2.62e-05_epochs_13
+Epoch: 1 (0m 24s) 	Training Loss: 1.611, 	Test Loss: 1.582,  	Training acc: 0.85, 	Test acc: 0.88, 
+Epoch: 2 (0m 24s) 	Training Loss: 1.563, 	Test Loss: 1.569,  	Training acc: 0.90, 	Test acc: 0.89, 
+[32m[I 2023-04-24 00:02:24,904][0m Trial 32 pruned. [0m
+Model ====> cnn_model_conv_3_lr_3.82e-05_epochs_17
+Epoch: 1 (0m 24s) 	Training Loss: 1.650, 	Test Loss: 1.639,  	Training acc: 0.81, 	Test acc: 0.82, 
+[32m[I 2023-04-24 00:02:50,129][0m Trial 33 pruned. [0m
+Model ====> cnn_model_conv_6_lr_1.73e-05_epochs_15
+Epoch: 1 (0m 21s) 	Training Loss: 1.724, 	Test Loss: 1.643,  	Training acc: 0.76, 	Test acc: 0.82, 
+[32m[I 2023-04-24 00:03:11,954][0m Trial 34 pruned. [0m
+Model ====> cnn_model_conv_3_lr_0.00017_epochs_14
+Epoch: 1 (0m 25s) 	Training Loss: 1.783, 	Test Loss: 1.772,  	Training acc: 0.68, 	Test acc: 0.69, 
+[32m[I 2023-04-24 00:03:37,468][0m Trial 35 pruned. [0m
+Model ====> cnn_model_conv_4_lr_0.000102_epochs_16
+Epoch: 1 (0m 21s) 	Training Loss: 1.616, 	Test Loss: 1.585,  	Training acc: 0.85, 	Test acc: 0.87, 
+[32m[I 2023-04-24 00:03:59,300][0m Trial 36 pruned. [0m
+Model ====> cnn_model_conv_3_lr_2.69e-05_epochs_13
+Epoch: 1 (0m 26s) 	Training Loss: 1.610, 	Test Loss: 1.578,  	Training acc: 0.86, 	Test acc: 0.88, 
+Epoch: 2 (0m 26s) 	Training Loss: 1.563, 	Test Loss: 1.568,  	Training acc: 0.90, 	Test acc: 0.89, 
+Epoch: 3 (0m 26s) 	Training Loss: 1.550, 	Test Loss: 1.565,  	Training acc: 0.91, 	Test acc: 0.90, 
+[32m[I 2023-04-24 00:05:18,105][0m Trial 37 pruned. [0m
+Model ====> cnn_model_conv_3_lr_4.97e-05_epochs_18
+Epoch: 1 (0m 26s) 	Training Loss: 1.651, 	Test Loss: 1.639,  	Training acc: 0.81, 	Test acc: 0.82, 
+[32m[I 2023-04-24 00:05:44,814][0m Trial 38 pruned. [0m
+Model ====> cnn_model_conv_4_lr_1.39e-05_epochs_5
+Epoch: 1 (0m 21s) 	Training Loss: 1.641, 	Test Loss: 1.589,  	Training acc: 0.84, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:06:06,673][0m Trial 39 pruned. [0m
+Model ====> cnn_model_conv_6_lr_1.64e-05_epochs_14
+Epoch: 1 (0m 23s) 	Training Loss: 1.730, 	Test Loss: 1.639,  	Training acc: 0.77, 	Test acc: 0.83, 
+[32m[I 2023-04-24 00:06:30,660][0m Trial 40 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.08e-05_epochs_12
+Epoch: 1 (0m 26s) 	Training Loss: 1.620, 	Test Loss: 1.594,  	Training acc: 0.85, 	Test acc: 0.87, 
+[32m[I 2023-04-24 00:06:57,271][0m Trial 41 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.05e-05_epochs_11
+Epoch: 1 (0m 26s) 	Training Loss: 1.619, 	Test Loss: 1.586,  	Training acc: 0.86, 	Test acc: 0.88, 
+Epoch: 2 (0m 26s) 	Training Loss: 1.562, 	Test Loss: 1.575,  	Training acc: 0.90, 	Test acc: 0.89, 
+[32m[I 2023-04-24 00:07:50,166][0m Trial 42 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.86e-05_epochs_9
+Epoch: 1 (0m 26s) 	Training Loss: 1.611, 	Test Loss: 1.578,  	Training acc: 0.86, 	Test acc: 0.89, 
+Epoch: 2 (0m 26s) 	Training Loss: 1.563, 	Test Loss: 1.567,  	Training acc: 0.90, 	Test acc: 0.89, 
+Epoch: 3 (0m 26s) 	Training Loss: 1.548, 	Test Loss: 1.562,  	Training acc: 0.91, 	Test acc: 0.90, 
+Epoch: 4 (0m 26s) 	Training Loss: 1.539, 	Test Loss: 1.555,  	Training acc: 0.92, 	Test acc: 0.91, 
+Epoch: 5 (0m 26s) 	Training Loss: 1.531, 	Test Loss: 1.556,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 6 (0m 26s) 	Training Loss: 1.525, 	Test Loss: 1.550,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 7 (0m 26s) 	Training Loss: 1.520, 	Test Loss: 1.546,  	Training acc: 0.94, 	Test acc: 0.92, 
+Epoch: 8 (0m 26s) 	Training Loss: 1.517, 	Test Loss: 1.545,  	Training acc: 0.95, 	Test acc: 0.92, 
+Epoch: 9 (0m 26s) 	Training Loss: 1.513, 	Test Loss: 1.547,  	Training acc: 0.95, 	Test acc: 0.91, 
+[32m[I 2023-04-24 00:11:49,468][0m Trial 43 finished with value: 0.9163 and parameters: {'conv_layer': 3, 'lr': 1.863357860435058e-05, 'num_epochs': 9}. Best is trial 21 with value: 0.9242.[0m
+Training completed in 3m 55s 	Training Loss: 1.513, 	Test Loss: 1.547,  	Training acc: 0.95, 	Test acc: 0.91, 
+
+Model Evaluation Summary:
+Accuracy: 91.630%
+F1 Score: 91.666%
+
+Classwise Accuracy Score: 
+|   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+|         0.837 |     0.983 |      0.849 |   0.918 |  0.892 |    0.945 |   0.806 |     0.986 | 0.988 |        0.959 |
+
+Confusion Matrix:
+| True Label   |   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|:-------------|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+| T-shirt/top  |           837 |         0 |         14 |      20 |      2 |        1 |     117 |         0 |     9 |            0 |
+| Trouser      |             0 |       983 |          0 |       8 |      5 |        0 |       2 |         0 |     2 |            0 |
+| Pullover     |            14 |         1 |        849 |       9 |     59 |        1 |      63 |         0 |     4 |            0 |
+| Dress        |             6 |         3 |          7 |     918 |     36 |        0 |      27 |         0 |     3 |            0 |
+| Coat         |             1 |         1 |         35 |      17 |    892 |        0 |      54 |         0 |     0 |            0 |
+| Sandal       |             0 |         0 |          1 |       1 |      0 |      945 |       1 |        30 |     1 |           21 |
+| Shirt        |            70 |         0 |         31 |      25 |     62 |        0 |     806 |         0 |     6 |            0 |
+| Sneaker      |             0 |         0 |          0 |       0 |      0 |        2 |       0 |       986 |     0 |           12 |
+| Bag          |             2 |         2 |          0 |       3 |      1 |        1 |       1 |         2 |   988 |            0 |
+| Ankle boot   |             0 |         0 |          0 |       0 |      0 |        1 |       1 |        39 |     0 |          959 |
+Model ====> cnn_model_conv_3_lr_2.86e-05_epochs_12
+Epoch: 1 (0m 26s) 	Training Loss: 1.612, 	Test Loss: 1.581,  	Training acc: 0.85, 	Test acc: 0.88, 
+Epoch: 2 (0m 26s) 	Training Loss: 1.566, 	Test Loss: 1.581,  	Training acc: 0.90, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:12:42,221][0m Trial 44 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.52e-05_epochs_10
+Epoch: 1 (0m 26s) 	Training Loss: 1.613, 	Test Loss: 1.585,  	Training acc: 0.86, 	Test acc: 0.88, 
+Epoch: 2 (0m 26s) 	Training Loss: 1.562, 	Test Loss: 1.561,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 26s) 	Training Loss: 1.547, 	Test Loss: 1.561,  	Training acc: 0.92, 	Test acc: 0.90, 
+Epoch: 4 (0m 26s) 	Training Loss: 1.537, 	Test Loss: 1.551,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 5 (0m 26s) 	Training Loss: 1.529, 	Test Loss: 1.554,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 6 (0m 26s) 	Training Loss: 1.524, 	Test Loss: 1.550,  	Training acc: 0.94, 	Test acc: 0.91, 
+[32m[I 2023-04-24 00:15:19,434][0m Trial 45 pruned. [0m
+Model ====> cnn_model_conv_4_lr_4.79e-05_epochs_13
+Epoch: 1 (0m 21s) 	Training Loss: 1.614, 	Test Loss: 1.590,  	Training acc: 0.85, 	Test acc: 0.87, 
+[32m[I 2023-04-24 00:15:41,177][0m Trial 46 pruned. [0m
+Model ====> cnn_model_conv_3_lr_0.000711_epochs_14
+Epoch: 1 (0m 26s) 	Training Loss: 2.358, 	Test Loss: 2.361,  	Training acc: 0.10, 	Test acc: 0.10, 
+[32m[I 2023-04-24 00:16:07,795][0m Trial 47 pruned. [0m
+Model ====> cnn_model_conv_3_lr_2.22e-05_epochs_9
+Epoch: 1 (0m 26s) 	Training Loss: 1.612, 	Test Loss: 1.589,  	Training acc: 0.86, 	Test acc: 0.87, 
+[32m[I 2023-04-24 00:16:34,399][0m Trial 48 pruned. [0m
+Model ====> cnn_model_conv_4_lr_1.02e-05_epochs_15
+Epoch: 1 (0m 21s) 	Training Loss: 1.659, 	Test Loss: 1.596,  	Training acc: 0.83, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:16:56,183][0m Trial 49 pruned. [0m
+Model ====> cnn_model_conv_3_lr_3.24e-05_epochs_11
+Epoch: 1 (0m 26s) 	Training Loss: 1.648, 	Test Loss: 1.624,  	Training acc: 0.82, 	Test acc: 0.84, 
+[32m[I 2023-04-24 00:17:22,859][0m Trial 50 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.98e-05_epochs_9
+Epoch: 1 (0m 26s) 	Training Loss: 1.617, 	Test Loss: 1.585,  	Training acc: 0.85, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:17:49,562][0m Trial 51 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.54e-05_epochs_8
+Epoch: 1 (0m 26s) 	Training Loss: 1.615, 	Test Loss: 1.581,  	Training acc: 0.86, 	Test acc: 0.88, 
+Epoch: 2 (0m 26s) 	Training Loss: 1.560, 	Test Loss: 1.568,  	Training acc: 0.90, 	Test acc: 0.89, 
+[32m[I 2023-04-24 00:18:42,301][0m Trial 52 pruned. [0m
+Model ====> cnn_model_conv_3_lr_2.03e-05_epochs_12
+Epoch: 1 (0m 26s) 	Training Loss: 1.648, 	Test Loss: 1.629,  	Training acc: 0.82, 	Test acc: 0.83, 
+[32m[I 2023-04-24 00:19:08,955][0m Trial 53 pruned. [0m
+Model ====> cnn_model_conv_3_lr_3.29e-05_epochs_7
+Epoch: 1 (0m 26s) 	Training Loss: 1.613, 	Test Loss: 1.584,  	Training acc: 0.85, 	Test acc: 0.88, 
+Epoch: 2 (0m 26s) 	Training Loss: 1.566, 	Test Loss: 1.582,  	Training acc: 0.90, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:20:01,676][0m Trial 54 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.39e-05_epochs_10
+Epoch: 1 (0m 26s) 	Training Loss: 1.615, 	Test Loss: 1.583,  	Training acc: 0.86, 	Test acc: 0.88, 
+Epoch: 2 (0m 26s) 	Training Loss: 1.564, 	Test Loss: 1.582,  	Training acc: 0.90, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:20:54,520][0m Trial 55 pruned. [0m
+Model ====> cnn_model_conv_3_lr_5.16e-05_epochs_13
+Epoch: 1 (0m 26s) 	Training Loss: 1.618, 	Test Loss: 1.588,  	Training acc: 0.85, 	Test acc: 0.87, 
+[32m[I 2023-04-24 00:21:21,243][0m Trial 56 pruned. [0m
+Model ====> cnn_model_conv_5_lr_2.22e-05_epochs_9
+Epoch: 1 (0m 22s) 	Training Loss: 1.658, 	Test Loss: 1.589,  	Training acc: 0.82, 	Test acc: 0.88, 
+Epoch: 2 (0m 22s) 	Training Loss: 1.571, 	Test Loss: 1.573,  	Training acc: 0.90, 	Test acc: 0.89, 
+[32m[I 2023-04-24 00:22:05,712][0m Trial 57 pruned. [0m
+Model ====> cnn_model_conv_4_lr_6.63e-05_epochs_11
+Epoch: 1 (0m 21s) 	Training Loss: 1.616, 	Test Loss: 1.586,  	Training acc: 0.85, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:22:27,372][0m Trial 58 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.32e-05_epochs_12
+Epoch: 1 (0m 26s) 	Training Loss: 1.617, 	Test Loss: 1.583,  	Training acc: 0.85, 	Test acc: 0.88, 
+Epoch: 2 (0m 26s) 	Training Loss: 1.564, 	Test Loss: 1.565,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 24s) 	Training Loss: 1.548, 	Test Loss: 1.560,  	Training acc: 0.92, 	Test acc: 0.90, 
+Epoch: 4 (0m 25s) 	Training Loss: 1.538, 	Test Loss: 1.553,  	Training acc: 0.92, 	Test acc: 0.91, 
+Epoch: 5 (0m 24s) 	Training Loss: 1.530, 	Test Loss: 1.549,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 6 (0m 24s) 	Training Loss: 1.524, 	Test Loss: 1.549,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 7 (0m 24s) 	Training Loss: 1.519, 	Test Loss: 1.554,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 8 (0m 24s) 	Training Loss: 1.514, 	Test Loss: 1.543,  	Training acc: 0.95, 	Test acc: 0.92, 
+Epoch: 9 (0m 24s) 	Training Loss: 1.510, 	Test Loss: 1.552,  	Training acc: 0.95, 	Test acc: 0.91, 
+Epoch: 10 (0m 25s) 	Training Loss: 1.507, 	Test Loss: 1.542,  	Training acc: 0.96, 	Test acc: 0.92, 
+Epoch: 11 (0m 26s) 	Training Loss: 1.504, 	Test Loss: 1.542,  	Training acc: 0.96, 	Test acc: 0.92, 
+Epoch: 12 (0m 26s) 	Training Loss: 1.502, 	Test Loss: 1.538,  	Training acc: 0.96, 	Test acc: 0.92, 
+[32m[I 2023-04-24 00:27:34,608][0m Trial 59 finished with value: 0.9261 and parameters: {'conv_layer': 3, 'lr': 1.3190817110540418e-05, 'num_epochs': 12}. Best is trial 59 with value: 0.9261.[0m
+Training completed in 5m 3s 	Training Loss: 1.502, 	Test Loss: 1.538,  	Training acc: 0.96, 	Test acc: 0.92, 
+
+Model Evaluation Summary:
+Accuracy: 92.610%
+F1 Score: 92.543%
+
+Classwise Accuracy Score: 
+|   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+|         0.876 |     0.983 |      0.894 |   0.932 |  0.918 |    0.982 |   0.736 |      0.98 | 0.991 |        0.969 |
+
+Confusion Matrix:
+| True Label   |   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|:-------------|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+| T-shirt/top  |           876 |         0 |         24 |      14 |      6 |        0 |      68 |         0 |    12 |            0 |
+| Trouser      |             0 |       983 |          0 |      10 |      5 |        0 |       0 |         0 |     2 |            0 |
+| Pullover     |            15 |         1 |        894 |       9 |     44 |        0 |      34 |         0 |     3 |            0 |
+| Dress        |            10 |         1 |         11 |     932 |     30 |        0 |      14 |         0 |     2 |            0 |
+| Coat         |             1 |         0 |         25 |      20 |    918 |        0 |      36 |         0 |     0 |            0 |
+| Sandal       |             0 |         0 |          0 |       0 |      0 |      982 |       0 |        13 |     1 |            4 |
+| Shirt        |            91 |         0 |         47 |      38 |     74 |        0 |     736 |         0 |    14 |            0 |
+| Sneaker      |             0 |         0 |          0 |       0 |      0 |        3 |       0 |       980 |     0 |           17 |
+| Bag          |             1 |         2 |          0 |       2 |      2 |        1 |       0 |         1 |   991 |            0 |
+| Ankle boot   |             0 |         0 |          0 |       0 |      0 |        3 |       0 |        26 |     2 |          969 |
+Model ====> cnn_model_conv_3_lr_1.05e-05_epochs_12
+Epoch: 1 (0m 26s) 	Training Loss: 1.620, 	Test Loss: 1.586,  	Training acc: 0.86, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:28:02,013][0m Trial 60 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.46e-05_epochs_10
+Epoch: 1 (0m 27s) 	Training Loss: 1.614, 	Test Loss: 1.582,  	Training acc: 0.86, 	Test acc: 0.88, 
+Epoch: 2 (0m 27s) 	Training Loss: 1.561, 	Test Loss: 1.566,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 27s) 	Training Loss: 1.546, 	Test Loss: 1.560,  	Training acc: 0.92, 	Test acc: 0.90, 
+Epoch: 4 (0m 24s) 	Training Loss: 1.536, 	Test Loss: 1.553,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 5 (0m 26s) 	Training Loss: 1.529, 	Test Loss: 1.554,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 6 (0m 24s) 	Training Loss: 1.523, 	Test Loss: 1.551,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 7 (0m 24s) 	Training Loss: 1.517, 	Test Loss: 1.549,  	Training acc: 0.95, 	Test acc: 0.91, 
+Epoch: 8 (0m 24s) 	Training Loss: 1.513, 	Test Loss: 1.552,  	Training acc: 0.95, 	Test acc: 0.91, 
+[32m[I 2023-04-24 00:31:29,806][0m Trial 61 pruned. [0m
+Model ====> cnn_model_conv_3_lr_2.26e-05_epochs_11
+Epoch: 1 (0m 24s) 	Training Loss: 1.611, 	Test Loss: 1.585,  	Training acc: 0.86, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:31:54,986][0m Trial 62 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.34e-05_epochs_12
+Epoch: 1 (0m 24s) 	Training Loss: 1.616, 	Test Loss: 1.587,  	Training acc: 0.86, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:32:20,203][0m Trial 63 pruned. [0m
+Model ====> cnn_model_conv_3_lr_3.48e-05_epochs_14
+Epoch: 1 (0m 24s) 	Training Loss: 1.613, 	Test Loss: 1.590,  	Training acc: 0.85, 	Test acc: 0.87, 
+[32m[I 2023-04-24 00:32:45,338][0m Trial 64 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.91e-05_epochs_11
+Epoch: 1 (0m 24s) 	Training Loss: 1.612, 	Test Loss: 1.604,  	Training acc: 0.86, 	Test acc: 0.86, 
+[32m[I 2023-04-24 00:33:10,562][0m Trial 65 pruned. [0m
+Model ====> cnn_model_conv_3_lr_2.87e-05_epochs_13
+Epoch: 1 (0m 24s) 	Training Loss: 1.611, 	Test Loss: 1.583,  	Training acc: 0.86, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:33:35,705][0m Trial 66 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.27e-05_epochs_17
+Epoch: 1 (0m 24s) 	Training Loss: 1.676, 	Test Loss: 1.648,  	Training acc: 0.79, 	Test acc: 0.82, 
+[32m[I 2023-04-24 00:34:01,172][0m Trial 67 pruned. [0m
+Model ====> cnn_model_conv_4_lr_1.8e-05_epochs_12
+Epoch: 1 (0m 20s) 	Training Loss: 1.633, 	Test Loss: 1.588,  	Training acc: 0.85, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:34:21,545][0m Trial 68 pruned. [0m
+Model ====> cnn_model_conv_3_lr_2.62e-05_epochs_15
+Epoch: 1 (0m 26s) 	Training Loss: 1.619, 	Test Loss: 1.601,  	Training acc: 0.85, 	Test acc: 0.86, 
+[32m[I 2023-04-24 00:34:48,195][0m Trial 69 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.03e-05_epochs_7
+Epoch: 1 (0m 25s) 	Training Loss: 1.626, 	Test Loss: 1.588,  	Training acc: 0.85, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:35:13,767][0m Trial 70 pruned. [0m
+Model ====> cnn_model_conv_4_lr_1.82e-05_epochs_10
+Epoch: 1 (0m 20s) 	Training Loss: 1.653, 	Test Loss: 1.591,  	Training acc: 0.82, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:35:34,858][0m Trial 71 pruned. [0m
+Model ====> cnn_model_conv_5_lr_1.4e-05_epochs_9
+Epoch: 1 (0m 22s) 	Training Loss: 1.707, 	Test Loss: 1.640,  	Training acc: 0.78, 	Test acc: 0.83, 
+[32m[I 2023-04-24 00:35:57,169][0m Trial 72 pruned. [0m
+Model ====> cnn_model_conv_3_lr_4.34e-05_epochs_13
+Epoch: 1 (0m 25s) 	Training Loss: 1.620, 	Test Loss: 1.587,  	Training acc: 0.84, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:36:23,265][0m Trial 73 pruned. [0m
+Model ====> cnn_model_conv_3_lr_2.4e-05_epochs_8
+Epoch: 1 (0m 24s) 	Training Loss: 1.610, 	Test Loss: 1.579,  	Training acc: 0.86, 	Test acc: 0.89, 
+Epoch: 2 (0m 24s) 	Training Loss: 1.563, 	Test Loss: 1.564,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 25s) 	Training Loss: 1.549, 	Test Loss: 1.565,  	Training acc: 0.91, 	Test acc: 0.90, 
+Epoch: 4 (0m 26s) 	Training Loss: 1.540, 	Test Loss: 1.553,  	Training acc: 0.92, 	Test acc: 0.91, 
+Epoch: 5 (0m 25s) 	Training Loss: 1.534, 	Test Loss: 1.559,  	Training acc: 0.93, 	Test acc: 0.90, 
+Epoch: 6 (0m 25s) 	Training Loss: 1.529, 	Test Loss: 1.554,  	Training acc: 0.93, 	Test acc: 0.91, 
+[32m[I 2023-04-24 00:38:55,597][0m Trial 74 pruned. [0m
+Model ====> cnn_model_conv_4_lr_1.26e-05_epochs_20
+Epoch: 1 (0m 20s) 	Training Loss: 1.672, 	Test Loss: 1.631,  	Training acc: 0.81, 	Test acc: 0.83, 
+[32m[I 2023-04-24 00:39:16,740][0m Trial 75 pruned. [0m
+Model ====> cnn_model_conv_3_lr_3.44e-05_epochs_9
+Epoch: 1 (0m 25s) 	Training Loss: 1.609, 	Test Loss: 1.585,  	Training acc: 0.86, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:39:42,603][0m Trial 76 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.86e-05_epochs_11
+Epoch: 1 (0m 25s) 	Training Loss: 1.611, 	Test Loss: 1.582,  	Training acc: 0.86, 	Test acc: 0.88, 
+Epoch: 2 (0m 25s) 	Training Loss: 1.563, 	Test Loss: 1.566,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 25s) 	Training Loss: 1.549, 	Test Loss: 1.562,  	Training acc: 0.91, 	Test acc: 0.90, 
+Epoch: 4 (0m 26s) 	Training Loss: 1.539, 	Test Loss: 1.564,  	Training acc: 0.92, 	Test acc: 0.90, 
+[32m[I 2023-04-24 00:41:25,731][0m Trial 77 pruned. [0m
+Model ====> cnn_model_conv_3_lr_6.03e-05_epochs_10
+Epoch: 1 (0m 25s) 	Training Loss: 1.614, 	Test Loss: 1.611,  	Training acc: 0.85, 	Test acc: 0.85, 
+[32m[I 2023-04-24 00:41:51,535][0m Trial 78 pruned. [0m
+Model ====> cnn_model_conv_6_lr_3.94e-05_epochs_16
+Epoch: 1 (0m 22s) 	Training Loss: 1.682, 	Test Loss: 1.629,  	Training acc: 0.80, 	Test acc: 0.83, 
+[32m[I 2023-04-24 00:42:13,747][0m Trial 79 pruned. [0m
+Model ====> cnn_model_conv_4_lr_1.22e-05_epochs_14
+Epoch: 1 (0m 20s) 	Training Loss: 1.649, 	Test Loss: 1.590,  	Training acc: 0.83, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:42:34,101][0m Trial 80 pruned. [0m
+Model ====> cnn_model_conv_5_lr_1.6e-05_epochs_10
+Epoch: 1 (0m 21s) 	Training Loss: 1.684, 	Test Loss: 1.606,  	Training acc: 0.80, 	Test acc: 0.86, 
+[32m[I 2023-04-24 00:42:56,015][0m Trial 81 pruned. [0m
+Model ====> cnn_model_conv_4_lr_2.3e-05_epochs_12
+Epoch: 1 (0m 21s) 	Training Loss: 1.625, 	Test Loss: 1.580,  	Training acc: 0.85, 	Test acc: 0.88, 
+Epoch: 2 (0m 20s) 	Training Loss: 1.563, 	Test Loss: 1.569,  	Training acc: 0.90, 	Test acc: 0.89, 
+[32m[I 2023-04-24 00:43:37,403][0m Trial 82 pruned. [0m
+Model ====> cnn_model_conv_4_lr_2.95e-05_epochs_8
+Epoch: 1 (0m 20s) 	Training Loss: 1.650, 	Test Loss: 1.594,  	Training acc: 0.82, 	Test acc: 0.87, 
+[32m[I 2023-04-24 00:43:57,773][0m Trial 83 pruned. [0m
+Model ====> cnn_model_conv_4_lr_1.26e-05_epochs_11
+Epoch: 1 (0m 21s) 	Training Loss: 1.650, 	Test Loss: 1.592,  	Training acc: 0.83, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:44:19,078][0m Trial 84 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.01e-05_epochs_9
+Epoch: 1 (0m 25s) 	Training Loss: 1.621, 	Test Loss: 1.587,  	Training acc: 0.85, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:44:44,827][0m Trial 85 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.68e-05_epochs_13
+Epoch: 1 (0m 25s) 	Training Loss: 1.612, 	Test Loss: 1.579,  	Training acc: 0.86, 	Test acc: 0.88, 
+Epoch: 2 (0m 25s) 	Training Loss: 1.561, 	Test Loss: 1.570,  	Training acc: 0.90, 	Test acc: 0.89, 
+[32m[I 2023-04-24 00:45:36,428][0m Trial 86 pruned. [0m
+Model ====> cnn_model_conv_3_lr_2.37e-05_epochs_12
+Epoch: 1 (0m 26s) 	Training Loss: 1.610, 	Test Loss: 1.580,  	Training acc: 0.86, 	Test acc: 0.88, 
+Epoch: 2 (0m 26s) 	Training Loss: 1.564, 	Test Loss: 1.565,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 25s) 	Training Loss: 1.550, 	Test Loss: 1.562,  	Training acc: 0.91, 	Test acc: 0.90, 
+Epoch: 4 (0m 25s) 	Training Loss: 1.541, 	Test Loss: 1.558,  	Training acc: 0.92, 	Test acc: 0.90, 
+[32m[I 2023-04-24 00:47:20,701][0m Trial 87 pruned. [0m
+Model ====> cnn_model_conv_5_lr_4.62e-05_epochs_10
+Epoch: 1 (0m 20s) 	Training Loss: 1.663, 	Test Loss: 1.629,  	Training acc: 0.81, 	Test acc: 0.83, 
+[32m[I 2023-04-24 00:47:41,416][0m Trial 88 pruned. [0m
+Model ====> cnn_model_conv_3_lr_2.02e-05_epochs_11
+Epoch: 1 (0m 25s) 	Training Loss: 1.610, 	Test Loss: 1.580,  	Training acc: 0.86, 	Test acc: 0.89, 
+Epoch: 2 (0m 25s) 	Training Loss: 1.563, 	Test Loss: 1.565,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 24s) 	Training Loss: 1.549, 	Test Loss: 1.573,  	Training acc: 0.91, 	Test acc: 0.89, 
+Epoch: 4 (0m 24s) 	Training Loss: 1.540, 	Test Loss: 1.557,  	Training acc: 0.92, 	Test acc: 0.90, 
+[32m[I 2023-04-24 00:49:21,420][0m Trial 89 pruned. [0m
+Model ====> cnn_model_conv_4_lr_9.26e-05_epochs_9
+Epoch: 1 (0m 19s) 	Training Loss: 1.631, 	Test Loss: 1.609,  	Training acc: 0.83, 	Test acc: 0.85, 
+[32m[I 2023-04-24 00:49:41,401][0m Trial 90 pruned. [0m
+Model ====> cnn_model_conv_4_lr_1.55e-05_epochs_12
+Epoch: 1 (0m 22s) 	Training Loss: 1.638, 	Test Loss: 1.592,  	Training acc: 0.84, 	Test acc: 0.87, 
+[32m[I 2023-04-24 00:50:04,239][0m Trial 91 pruned. [0m
+Model ====> cnn_model_conv_4_lr_1.22e-05_epochs_13
+Epoch: 1 (0m 23s) 	Training Loss: 1.653, 	Test Loss: 1.590,  	Training acc: 0.83, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:50:27,407][0m Trial 92 pruned. [0m
+Model ====> cnn_model_conv_4_lr_2.54e-05_epochs_11
+Epoch: 1 (0m 23s) 	Training Loss: 1.621, 	Test Loss: 1.578,  	Training acc: 0.85, 	Test acc: 0.89, 
+Epoch: 2 (0m 22s) 	Training Loss: 1.561, 	Test Loss: 1.567,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 22s) 	Training Loss: 1.548, 	Test Loss: 1.555,  	Training acc: 0.92, 	Test acc: 0.91, 
+Epoch: 4 (0m 23s) 	Training Loss: 1.539, 	Test Loss: 1.561,  	Training acc: 0.92, 	Test acc: 0.90, 
+Epoch: 5 (0m 23s) 	Training Loss: 1.532, 	Test Loss: 1.550,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 6 (0m 23s) 	Training Loss: 1.528, 	Test Loss: 1.548,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 7 (0m 23s) 	Training Loss: 1.522, 	Test Loss: 1.550,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 8 (0m 23s) 	Training Loss: 1.519, 	Test Loss: 1.553,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 9 (0m 23s) 	Training Loss: 1.516, 	Test Loss: 1.543,  	Training acc: 0.95, 	Test acc: 0.92, 
+Epoch: 10 (0m 22s) 	Training Loss: 1.513, 	Test Loss: 1.546,  	Training acc: 0.95, 	Test acc: 0.92, 
+Epoch: 11 (0m 23s) 	Training Loss: 1.511, 	Test Loss: 1.541,  	Training acc: 0.95, 	Test acc: 0.92, 
+[32m[I 2023-04-24 00:54:45,271][0m Trial 93 finished with value: 0.9219 and parameters: {'conv_layer': 4, 'lr': 2.5352416644867526e-05, 'num_epochs': 11}. Best is trial 59 with value: 0.9261.[0m
+Training completed in 4m 14s 	Training Loss: 1.511, 	Test Loss: 1.541,  	Training acc: 0.95, 	Test acc: 0.92, 
+
+Model Evaluation Summary:
+Accuracy: 92.190%
+F1 Score: 92.163%
+
+Classwise Accuracy Score: 
+|   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+|         0.909 |     0.982 |      0.864 |   0.905 |  0.909 |    0.989 |   0.737 |     0.958 | 0.992 |        0.974 |
+
+Confusion Matrix:
+| True Label   |   T-shirt/top |   Trouser |   Pullover |   Dress |   Coat |   Sandal |   Shirt |   Sneaker |   Bag |   Ankle boot |
+|:-------------|--------------:|----------:|-----------:|--------:|-------:|---------:|--------:|----------:|------:|-------------:|
+| T-shirt/top  |           909 |         0 |         10 |       8 |      4 |        1 |      61 |         0 |     7 |            0 |
+| Trouser      |             0 |       982 |          0 |      10 |      3 |        0 |       3 |         0 |     2 |            0 |
+| Pullover     |            16 |         1 |        864 |       7 |     55 |        1 |      54 |         0 |     2 |            0 |
+| Dress        |            14 |         1 |         10 |     905 |     37 |        0 |      30 |         0 |     2 |            1 |
+| Coat         |             3 |         0 |         24 |      12 |    909 |        0 |      52 |         0 |     0 |            0 |
+| Sandal       |             0 |         0 |          1 |       0 |      0 |      989 |       0 |         7 |     1 |            2 |
+| Shirt        |           127 |         1 |         32 |      22 |     73 |        0 |     737 |         0 |     8 |            0 |
+| Sneaker      |             0 |         0 |          0 |       0 |      0 |        9 |       0 |       958 |     0 |           33 |
+| Bag          |             1 |         2 |          0 |       2 |      1 |        1 |       0 |         1 |   992 |            0 |
+| Ankle boot   |             0 |         0 |          0 |       0 |      0 |        7 |       0 |        18 |     1 |          974 |
+Model ====> cnn_model_conv_4_lr_2.73e-05_epochs_11
+Epoch: 1 (0m 22s) 	Training Loss: 1.623, 	Test Loss: 1.581,  	Training acc: 0.85, 	Test acc: 0.89, 
+Epoch: 2 (0m 22s) 	Training Loss: 1.562, 	Test Loss: 1.560,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 23s) 	Training Loss: 1.547, 	Test Loss: 1.556,  	Training acc: 0.92, 	Test acc: 0.91, 
+Epoch: 4 (0m 23s) 	Training Loss: 1.538, 	Test Loss: 1.553,  	Training acc: 0.92, 	Test acc: 0.91, 
+Epoch: 5 (0m 22s) 	Training Loss: 1.533, 	Test Loss: 1.553,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 6 (0m 23s) 	Training Loss: 1.527, 	Test Loss: 1.561,  	Training acc: 0.94, 	Test acc: 0.90, 
+[32m[I 2023-04-24 00:57:03,479][0m Trial 94 pruned. [0m
+Model ====> cnn_model_conv_3_lr_3.23e-05_epochs_10
+Epoch: 1 (0m 27s) 	Training Loss: 1.648, 	Test Loss: 1.635,  	Training acc: 0.82, 	Test acc: 0.82, 
+[32m[I 2023-04-24 00:57:31,109][0m Trial 95 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.6e-05_epochs_11
+Epoch: 1 (0m 27s) 	Training Loss: 1.641, 	Test Loss: 1.584,  	Training acc: 0.83, 	Test acc: 0.88, 
+[32m[I 2023-04-24 00:57:58,900][0m Trial 96 pruned. [0m
+Model ====> cnn_model_conv_4_lr_2.14e-05_epochs_12
+Epoch: 1 (0m 22s) 	Training Loss: 1.626, 	Test Loss: 1.577,  	Training acc: 0.85, 	Test acc: 0.89, 
+Epoch: 2 (0m 23s) 	Training Loss: 1.562, 	Test Loss: 1.561,  	Training acc: 0.90, 	Test acc: 0.90, 
+Epoch: 3 (0m 23s) 	Training Loss: 1.548, 	Test Loss: 1.560,  	Training acc: 0.92, 	Test acc: 0.90, 
+Epoch: 4 (0m 23s) 	Training Loss: 1.539, 	Test Loss: 1.556,  	Training acc: 0.92, 	Test acc: 0.91, 
+Epoch: 5 (0m 23s) 	Training Loss: 1.533, 	Test Loss: 1.552,  	Training acc: 0.93, 	Test acc: 0.91, 
+Epoch: 6 (0m 23s) 	Training Loss: 1.526, 	Test Loss: 1.547,  	Training acc: 0.94, 	Test acc: 0.92, 
+Epoch: 7 (0m 23s) 	Training Loss: 1.522, 	Test Loss: 1.546,  	Training acc: 0.94, 	Test acc: 0.92, 
+Epoch: 8 (0m 23s) 	Training Loss: 1.518, 	Test Loss: 1.549,  	Training acc: 0.94, 	Test acc: 0.91, 
+Epoch: 9 (0m 23s) 	Training Loss: 1.515, 	Test Loss: 1.545,  	Training acc: 0.95, 	Test acc: 0.92, 
+Epoch: 10 (0m 23s) 	Training Loss: 1.511, 	Test Loss: 1.544,  	Training acc: 0.95, 	Test acc: 0.92, 
+Epoch: 11 (0m 23s) 	Training Loss: 1.508, 	Test Loss: 1.544,  	Training acc: 0.95, 	Test acc: 0.92, 
+[32m[I 2023-04-24 01:02:17,623][0m Trial 97 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.01e-05_epochs_8
+Epoch: 1 (0m 27s) 	Training Loss: 1.623, 	Test Loss: 1.585,  	Training acc: 0.85, 	Test acc: 0.88, 
+[32m[I 2023-04-24 01:02:45,788][0m Trial 98 pruned. [0m
+Model ====> cnn_model_conv_3_lr_1.26e-05_epochs_10
+Epoch: 1 (0m 27s) 	Training Loss: 1.625, 	Test Loss: 1.583,  	Training acc: 0.85, 	Test acc: 0.88, 
+Epoch: 2 (0m 27s) 	Training Loss: 1.565, 	Test Loss: 1.577,  	Training acc: 0.90, 	Test acc: 0.89, 
+[32m[I 2023-04-24 01:03:41,382][0m Trial 99 pruned. [0m
+Study statistics: 
+  Number of finished trials:  100
+  Number of pruned trials:  85
+  Number of complete trials:  15
+Best trial:
+  Value:  0.9261
+  Params: 
+    conv_layer: 3
+    lr: 1.3190817110540418e-05
+    num_epochs: 12
